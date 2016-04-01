@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/YAWL-project/src" modelPluginID="YAWL-project"
+    modelName="YAWL_net" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    usedGenPackages="../../org.pnml.tools.epnk/model/PNMLCoreModel.genmodel#//pnmlcoremodel"
+    importOrganizing="true">
+  <foreignModel>YAWL_net.ecore</foreignModel>
+  <genPackages prefix="YAWL_net" disposableProviderFactory="true" ecorePackage="YAWL_net.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="YAWL_net.ecore#//PlaceTypes">
+      <genEnumLiterals ecoreEnumLiteral="YAWL_net.ecore#//PlaceTypes/Normal"/>
+      <genEnumLiterals ecoreEnumLiteral="YAWL_net.ecore#//PlaceTypes/Start"/>
+      <genEnumLiterals ecoreEnumLiteral="YAWL_net.ecore#//PlaceTypes/End"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="YAWL_net.ecore#//TrasitionTypes">
+      <genEnumLiterals ecoreEnumLiteral="YAWL_net.ecore#//TrasitionTypes/AND"/>
+      <genEnumLiterals ecoreEnumLiteral="YAWL_net.ecore#//TrasitionTypes/OR"/>
+      <genEnumLiterals ecoreEnumLiteral="YAWL_net.ecore#//TrasitionTypes/XOR"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="YAWL_net.ecore#//ArcTypes">
+      <genEnumLiterals ecoreEnumLiteral="YAWL_net.ecore#//ArcTypes/Normal"/>
+      <genEnumLiterals ecoreEnumLiteral="YAWL_net.ecore#//ArcTypes/Reset"/>
+    </genEnums>
+    <genClasses ecoreClass="YAWL_net.ecore#//Place">
+      <genFeatures createChild="false" ecoreFeature="ecore:EReference YAWL_net.ecore#//Place/type"/>
+    </genClasses>
+    <genClasses ecoreClass="YAWL_net.ecore#//YAWL_NetType"/>
+    <genClasses ecoreClass="YAWL_net.ecore#//Transition">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference YAWL_net.ecore#//Transition/join"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference YAWL_net.ecore#//Transition/split"/>
+    </genClasses>
+    <genClasses ecoreClass="YAWL_net.ecore#//Arc">
+      <genFeatures createChild="false" ecoreFeature="ecore:EReference YAWL_net.ecore#//Arc/type"/>
+    </genClasses>
+    <genClasses ecoreClass="YAWL_net.ecore#//ArcType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute YAWL_net.ecore#//ArcType/text"/>
+    </genClasses>
+    <genClasses ecoreClass="YAWL_net.ecore#//PlaceType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute YAWL_net.ecore#//PlaceType/text"/>
+    </genClasses>
+    <genClasses ecoreClass="YAWL_net.ecore#//TransitionType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute YAWL_net.ecore#//TransitionType/text"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
