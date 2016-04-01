@@ -25,6 +25,7 @@ public class ArcTest extends TestCase {
 	 */
 	protected Arc fixture = null;
 
+	// mere bla bla
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

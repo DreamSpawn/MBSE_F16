@@ -9,13 +9,13 @@ import YAWL_net.ArcTypes;
 
 public class ArcFigure extends org.pnml.tools.epnk.gmf.extensions.graphics.figures.ArcFigure {
 
+	// lalala la
 	Arc arc;
 	
 	public ArcFigure(Arc arc) {
 		super(arc);
 		this.arc = arc;
 		this.update();
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override
