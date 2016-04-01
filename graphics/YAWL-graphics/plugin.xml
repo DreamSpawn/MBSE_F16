@@ -1,0 +1,11 @@
+<plugin>
+	<extension
+		id="gruppeh.yawl.graphics"
+		name="YAWL net graphical extensions"
+		point="org.pnml.tools.epnk.diagram.graphics">
+		<graphicsextension
+			class="gruppeh.yawl.graphics.YAWLGraphics"
+			description="Special graphics for ... signal event nets">
+		</graphicsextension>
+	</extension>
+</plugin>
