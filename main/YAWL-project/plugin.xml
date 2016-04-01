@@ -13,6 +13,7 @@
 		class="YAWL_net.impl.YAWL_NetTypeImpl"
 		description="This is a YAWL Net" />
 	</extension>
+	
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated YAWL_net -->
       <package
