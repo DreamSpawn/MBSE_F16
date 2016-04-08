@@ -26,6 +26,9 @@ public class PlaceFigure extends org.pnml.tools.epnk.gmf.extensions.graphics.fig
 			int cx = rectangle.x + rectangle.width/2;
 			int cy = rectangle.y + rectangle.height/2;
 
+			if(type == null)
+				return;
+			
 			if (type.getText().equals(PlaceTypes.START)){
 				graphics.drawPolygon(new int[]{cx-4,cy-4,cx+4,cy,cx-4,cy+4} );
 			} else if (type.getText().equals(PlaceTypes.END)) {
