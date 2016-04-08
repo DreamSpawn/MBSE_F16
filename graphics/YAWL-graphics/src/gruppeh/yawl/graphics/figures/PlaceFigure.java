@@ -1,7 +1,12 @@
 package gruppeh.yawl.graphics.figures;
 
+
 import org.eclipse.draw2d.Graphics;
+import org.eclipse.draw2d.geometry.Point;
 import org.eclipse.draw2d.geometry.Rectangle;
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.graphics.Color;
+import org.eclipse.swt.widgets.Display;
 import org.pnml.tools.epnk.pnmlcoremodel.Place;
 
 import YAWL_net.PlaceType;
@@ -17,6 +22,7 @@ public class PlaceFigure extends org.pnml.tools.epnk.gmf.extensions.graphics.fig
 	@Override
 	protected void fillShape(Graphics graphics) {
 		super.fillShape(graphics);
+		graphics.pushState();
 		
 		if (place instanceof YAWL_net.Place){
 			YAWL_net.Place yawl_place = (YAWL_net.Place)place;
@@ -28,8 +34,15 @@ public class PlaceFigure extends org.pnml.tools.epnk.gmf.extensions.graphics.fig
 
 			if(type == null)
 				return;
+			graphics.setLineWidth(1);
 			
 			if (type.getText().equals(PlaceTypes.START)){
+				/*
+				Display display = Display.getCurrent();
+				Color black= display.getSystemColor(SWT.COLOR_BLACK);
+				graphics.setForegroundColor(black);
+				graphics.setBackgroundColor(black);
+				*/
 				graphics.drawPolygon(new int[]{cx-4,cy-4,cx+4,cy,cx-4,cy+4} );
 			} else if (type.getText().equals(PlaceTypes.END)) {
 				graphics.drawRectangle(cx-4, cy-4, 8, 8);
@@ -37,6 +50,7 @@ public class PlaceFigure extends org.pnml.tools.epnk.gmf.extensions.graphics.fig
 				
 			}
 		}
+		graphics.popState();
 	}
 	
 	@Override
