@@ -19,7 +19,7 @@ public class ArcFigure extends org.pnml.tools.epnk.gmf.extensions.graphics.figur
 		if (arc instanceof YAWL_net.Arc){
 			YAWL_net.Arc yawl_arc = (YAWL_net.Arc) arc;
 			ArcType type = yawl_arc.getType();
-			if (type.getText().equals(ArcTypes.NORMAL)){
+			if (type == null || type.getText().equals(ArcTypes.NORMAL)){
 				this.setLineStyle(SWT.LINE_SOLID);
 			} else if (type.getText().equals(ArcTypes.RESET)){
 				this.setLineStyle(SWT.LINE_DASH);
