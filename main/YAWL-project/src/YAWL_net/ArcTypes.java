@@ -36,7 +36,7 @@ public enum ArcTypes implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	RESET(0, "Reset", "Reset");
+	RESET(1, "Reset", "Reset");
 
 	/**
 	 * The '<em><b>Normal</b></em>' literal value.
@@ -66,7 +66,7 @@ public enum ArcTypes implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int RESET_VALUE = 0;
+	public static final int RESET_VALUE = 1;
 
 	/**
 	 * An array of all the '<em><b>Arc Types</b></em>' enumerators.
@@ -135,6 +135,7 @@ public enum ArcTypes implements Enumerator {
 	public static ArcTypes get(int value) {
 		switch (value) {
 			case NORMAL_VALUE: return NORMAL;
+			case RESET_VALUE: return RESET;
 		}
 		return null;
 	}

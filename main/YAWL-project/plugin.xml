@@ -90,7 +90,7 @@
       <constraintProvider
             cache="true">
          <package
-               namespaceUri="http://se.compute.dtu.dk/mbse/yawl">
+               namespaceUri="westh.it/YAWL">
          </package>
          <constraints categories="org.pnml.tools.epnk.validation">
             <!--  OCL constraint from 1. 
