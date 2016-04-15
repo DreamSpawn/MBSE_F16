@@ -85,4 +85,40 @@
       </constraintProvider>
    </extension>
 
+	   <extension
+         point="org.eclipse.emf.validation.constraintProviders">
+      <constraintProvider
+            cache="true">
+         <package
+               namespaceUri="http://se.compute.dtu.dk/mbse/yawl">
+         </package>
+         <constraints categories="org.pnml.tools.epnk.validation">
+            <!--  OCL constraint from 1. 
+               ...
+            -->
+            <!-- TODO class attribute of the constraint should be the fully qualified name
+                      of the class implementing the Java constraint, checking start and
+                      end places. DONE -->
+            <constraint
+                  lang="Java"
+                  class="YAWL_net.StartEndConditions"
+                  severity="ERROR"
+                  mode="Batch"
+                  name="One start and end place"
+                  id="dk.dtu.compute.mbse.yawl.validation.one-start-and-end-place"
+                  statusCode="402">
+               <!-- TODO the class here needs to refer to Ecore class of the YAWL Petri net type
+                    (name and URI of the package separated by a colon). DONE -->
+               <target class="YAWL_NetType:westh.it/YAWL"/>
+               <description>
+                  A YAWL net must have one start and end place.
+               </description>
+               <message>
+                  The YAWL net {0} does not have exactly one start place and one end place.
+               </message>
+            </constraint>
+         </constraints>
+      </constraintProvider>
+   </extension>
+   
 </plugin>
