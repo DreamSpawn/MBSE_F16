@@ -31,7 +31,7 @@ public interface Arc extends org.pnml.tools.epnk.pnmlcoremodel.Arc {
 	 * @return the value of the '<em>Type</em>' containment reference.
 	 * @see #setType(ArcType)
 	 * @see YAWL_net.YAWL_netPackage#getArc_Type()
-	 * @model containment="true" required="true"
+	 * @model containment="true"
 	 * @generated
 	 */
 	ArcType getType();
