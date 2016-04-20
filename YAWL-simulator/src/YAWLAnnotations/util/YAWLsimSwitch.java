@@ -1,8 +1,8 @@
 /**
  */
-package YAWLsim.util;
+package YAWLAnnotations.util;
 
-import YAWLsim.*;
+import YAWLAnnotations.*;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -23,7 +23,7 @@ import org.pnml.tools.epnk.annotations.netannotations.TextualAnnotation;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see YAWLsim.YAWLsimPackage
+ * @see YAWLAnnotations.YAWLsimPackage
  * @generated
  */
 public class YAWLsimSwitch<T> extends Switch<T> {

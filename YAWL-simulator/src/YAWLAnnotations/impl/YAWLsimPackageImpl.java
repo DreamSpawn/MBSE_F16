@@ -1,12 +1,12 @@
 /**
  */
-package YAWLsim.impl;
+package YAWLAnnotations.impl;
 
-import YAWLsim.EnabledTrasition;
-import YAWLsim.Marking;
-import YAWLsim.SelectArc;
-import YAWLsim.YAWLsimFactory;
-import YAWLsim.YAWLsimPackage;
+import YAWLAnnotations.EnabledTrasition;
+import YAWLAnnotations.Marking;
+import YAWLAnnotations.SelectArc;
+import YAWLAnnotations.YAWLsimFactory;
+import YAWLAnnotations.YAWLsimPackage;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -56,7 +56,7 @@ public class YAWLsimPackageImpl extends EPackageImpl implements YAWLsimPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see YAWLsim.YAWLsimPackage#eNS_URI
+	 * @see YAWLAnnotations.YAWLsimPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */

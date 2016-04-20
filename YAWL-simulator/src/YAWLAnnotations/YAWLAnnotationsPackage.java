@@ -1,6 +1,6 @@
 /**
  */
-package YAWLsim;
+package YAWLAnnotations;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -16,23 +16,22 @@ import org.pnml.tools.epnk.annotations.netannotations.NetannotationsPackage;
  * <ul>
  *   <li>each class,</li>
  *   <li>each feature of each class,</li>
- *   <li>each operation of each class,</li>
  *   <li>each enum,</li>
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see YAWLsim.YAWLsimFactory
+ * @see YAWLAnnotations.YAWLAnnotationsFactory
  * @model kind="package"
  * @generated
  */
-public interface YAWLsimPackage extends EPackage {
+public interface YAWLAnnotationsPackage extends EPackage {
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNAME = "YAWLsim";
+	String eNAME = "YAWLAnnotations";
 
 	/**
 	 * The package namespace URI.
@@ -56,14 +55,14 @@ public interface YAWLsimPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	YAWLsimPackage eINSTANCE = YAWLsim.impl.YAWLsimPackageImpl.init();
+	YAWLAnnotationsPackage eINSTANCE = YAWLAnnotations.impl.YAWLAnnotationsPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link YAWLsim.impl.EnabledTrasitionImpl <em>Enabled Trasition</em>}' class.
+	 * The meta object id for the '{@link YAWLAnnotations.impl.EnabledTrasitionImpl <em>Enabled Trasition</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see YAWLsim.impl.EnabledTrasitionImpl
-	 * @see YAWLsim.impl.YAWLsimPackageImpl#getEnabledTrasition()
+	 * @see YAWLAnnotations.impl.EnabledTrasitionImpl
+	 * @see YAWLAnnotations.impl.YAWLAnnotationsPackageImpl#getEnabledTrasition()
 	 * @generated
 	 */
 	int ENABLED_TRASITION = 0;
@@ -114,11 +113,11 @@ public interface YAWLsimPackage extends EPackage {
 	int ENABLED_TRASITION_FEATURE_COUNT = NetannotationsPackage.OBJECT_ANNOTATION_FEATURE_COUNT + 2;
 
 	/**
-	 * The meta object id for the '{@link YAWLsim.impl.SelectArcImpl <em>Select Arc</em>}' class.
+	 * The meta object id for the '{@link YAWLAnnotations.impl.SelectArcImpl <em>Select Arc</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see YAWLsim.impl.SelectArcImpl
-	 * @see YAWLsim.impl.YAWLsimPackageImpl#getSelectArc()
+	 * @see YAWLAnnotations.impl.SelectArcImpl
+	 * @see YAWLAnnotations.impl.YAWLAnnotationsPackageImpl#getSelectArc()
 	 * @generated
 	 */
 	int SELECT_ARC = 1;
@@ -178,11 +177,11 @@ public interface YAWLsimPackage extends EPackage {
 	int SELECT_ARC_FEATURE_COUNT = NetannotationsPackage.OBJECT_ANNOTATION_FEATURE_COUNT + 3;
 
 	/**
-	 * The meta object id for the '{@link YAWLsim.impl.MarkingImpl <em>Marking</em>}' class.
+	 * The meta object id for the '{@link YAWLAnnotations.impl.MarkingImpl <em>Marking</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see YAWLsim.impl.MarkingImpl
-	 * @see YAWLsim.impl.YAWLsimPackageImpl#getMarking()
+	 * @see YAWLAnnotations.impl.MarkingImpl
+	 * @see YAWLAnnotations.impl.YAWLAnnotationsPackageImpl#getMarking()
 	 * @generated
 	 */
 	int MARKING = 2;
@@ -223,97 +222,98 @@ public interface YAWLsimPackage extends EPackage {
 	 */
 	int MARKING_FEATURE_COUNT = NetannotationsPackage.OBJECT_ANNOTATION_FEATURE_COUNT + 1;
 
+
 	/**
-	 * Returns the meta object for class '{@link YAWLsim.EnabledTrasition <em>Enabled Trasition</em>}'.
+	 * Returns the meta object for class '{@link YAWLAnnotations.EnabledTrasition <em>Enabled Trasition</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Enabled Trasition</em>'.
-	 * @see YAWLsim.EnabledTrasition
+	 * @see YAWLAnnotations.EnabledTrasition
 	 * @generated
 	 */
 	EClass getEnabledTrasition();
 
 	/**
-	 * Returns the meta object for the reference list '{@link YAWLsim.EnabledTrasition#getOutArcs <em>Out Arcs</em>}'.
+	 * Returns the meta object for the reference list '{@link YAWLAnnotations.EnabledTrasition#getOutArcs <em>Out Arcs</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Out Arcs</em>'.
-	 * @see YAWLsim.EnabledTrasition#getOutArcs()
+	 * @see YAWLAnnotations.EnabledTrasition#getOutArcs()
 	 * @see #getEnabledTrasition()
 	 * @generated
 	 */
 	EReference getEnabledTrasition_OutArcs();
 
 	/**
-	 * Returns the meta object for the reference list '{@link YAWLsim.EnabledTrasition#getInArcs <em>In Arcs</em>}'.
+	 * Returns the meta object for the reference list '{@link YAWLAnnotations.EnabledTrasition#getInArcs <em>In Arcs</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>In Arcs</em>'.
-	 * @see YAWLsim.EnabledTrasition#getInArcs()
+	 * @see YAWLAnnotations.EnabledTrasition#getInArcs()
 	 * @see #getEnabledTrasition()
 	 * @generated
 	 */
 	EReference getEnabledTrasition_InArcs();
 
 	/**
-	 * Returns the meta object for class '{@link YAWLsim.SelectArc <em>Select Arc</em>}'.
+	 * Returns the meta object for class '{@link YAWLAnnotations.SelectArc <em>Select Arc</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Select Arc</em>'.
-	 * @see YAWLsim.SelectArc
+	 * @see YAWLAnnotations.SelectArc
 	 * @generated
 	 */
 	EClass getSelectArc();
 
 	/**
-	 * Returns the meta object for the reference '{@link YAWLsim.SelectArc#getSourceTransition <em>Source Transition</em>}'.
+	 * Returns the meta object for the reference '{@link YAWLAnnotations.SelectArc#getSourceTransition <em>Source Transition</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Source Transition</em>'.
-	 * @see YAWLsim.SelectArc#getSourceTransition()
+	 * @see YAWLAnnotations.SelectArc#getSourceTransition()
 	 * @see #getSelectArc()
 	 * @generated
 	 */
 	EReference getSelectArc_SourceTransition();
 
 	/**
-	 * Returns the meta object for the reference '{@link YAWLsim.SelectArc#getTargetTransition <em>Target Transition</em>}'.
+	 * Returns the meta object for the reference '{@link YAWLAnnotations.SelectArc#getTargetTransition <em>Target Transition</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Target Transition</em>'.
-	 * @see YAWLsim.SelectArc#getTargetTransition()
+	 * @see YAWLAnnotations.SelectArc#getTargetTransition()
 	 * @see #getSelectArc()
 	 * @generated
 	 */
 	EReference getSelectArc_TargetTransition();
 
 	/**
-	 * Returns the meta object for the attribute '{@link YAWLsim.SelectArc#isSelected <em>Selected</em>}'.
+	 * Returns the meta object for the attribute '{@link YAWLAnnotations.SelectArc#isSelected <em>Selected</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Selected</em>'.
-	 * @see YAWLsim.SelectArc#isSelected()
+	 * @see YAWLAnnotations.SelectArc#isSelected()
 	 * @see #getSelectArc()
 	 * @generated
 	 */
 	EAttribute getSelectArc_Selected();
 
 	/**
-	 * Returns the meta object for class '{@link YAWLsim.Marking <em>Marking</em>}'.
+	 * Returns the meta object for class '{@link YAWLAnnotations.Marking <em>Marking</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Marking</em>'.
-	 * @see YAWLsim.Marking
+	 * @see YAWLAnnotations.Marking
 	 * @generated
 	 */
 	EClass getMarking();
 
 	/**
-	 * Returns the meta object for the attribute '{@link YAWLsim.Marking#getValue <em>Value</em>}'.
+	 * Returns the meta object for the attribute '{@link YAWLAnnotations.Marking#getValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see YAWLsim.Marking#getValue()
+	 * @see YAWLAnnotations.Marking#getValue()
 	 * @see #getMarking()
 	 * @generated
 	 */
@@ -326,7 +326,7 @@ public interface YAWLsimPackage extends EPackage {
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	YAWLsimFactory getYAWLsimFactory();
+	YAWLAnnotationsFactory getYAWLAnnotationsFactory();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -334,7 +334,6 @@ public interface YAWLsimPackage extends EPackage {
 	 * <ul>
 	 *   <li>each class,</li>
 	 *   <li>each feature of each class,</li>
-	 *   <li>each operation of each class,</li>
 	 *   <li>each enum,</li>
 	 *   <li>and each data type</li>
 	 * </ul>
@@ -343,11 +342,11 @@ public interface YAWLsimPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link YAWLsim.impl.EnabledTrasitionImpl <em>Enabled Trasition</em>}' class.
+		 * The meta object literal for the '{@link YAWLAnnotations.impl.EnabledTrasitionImpl <em>Enabled Trasition</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see YAWLsim.impl.EnabledTrasitionImpl
-		 * @see YAWLsim.impl.YAWLsimPackageImpl#getEnabledTrasition()
+		 * @see YAWLAnnotations.impl.EnabledTrasitionImpl
+		 * @see YAWLAnnotations.impl.YAWLAnnotationsPackageImpl#getEnabledTrasition()
 		 * @generated
 		 */
 		EClass ENABLED_TRASITION = eINSTANCE.getEnabledTrasition();
@@ -369,11 +368,11 @@ public interface YAWLsimPackage extends EPackage {
 		EReference ENABLED_TRASITION__IN_ARCS = eINSTANCE.getEnabledTrasition_InArcs();
 
 		/**
-		 * The meta object literal for the '{@link YAWLsim.impl.SelectArcImpl <em>Select Arc</em>}' class.
+		 * The meta object literal for the '{@link YAWLAnnotations.impl.SelectArcImpl <em>Select Arc</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see YAWLsim.impl.SelectArcImpl
-		 * @see YAWLsim.impl.YAWLsimPackageImpl#getSelectArc()
+		 * @see YAWLAnnotations.impl.SelectArcImpl
+		 * @see YAWLAnnotations.impl.YAWLAnnotationsPackageImpl#getSelectArc()
 		 * @generated
 		 */
 		EClass SELECT_ARC = eINSTANCE.getSelectArc();
@@ -403,11 +402,11 @@ public interface YAWLsimPackage extends EPackage {
 		EAttribute SELECT_ARC__SELECTED = eINSTANCE.getSelectArc_Selected();
 
 		/**
-		 * The meta object literal for the '{@link YAWLsim.impl.MarkingImpl <em>Marking</em>}' class.
+		 * The meta object literal for the '{@link YAWLAnnotations.impl.MarkingImpl <em>Marking</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see YAWLsim.impl.MarkingImpl
-		 * @see YAWLsim.impl.YAWLsimPackageImpl#getMarking()
+		 * @see YAWLAnnotations.impl.MarkingImpl
+		 * @see YAWLAnnotations.impl.YAWLAnnotationsPackageImpl#getMarking()
 		 * @generated
 		 */
 		EClass MARKING = eINSTANCE.getMarking();
@@ -422,4 +421,4 @@ public interface YAWLsimPackage extends EPackage {
 
 	}
 
-} //YAWLsimPackage
+} //YAWLAnnotationsPackage

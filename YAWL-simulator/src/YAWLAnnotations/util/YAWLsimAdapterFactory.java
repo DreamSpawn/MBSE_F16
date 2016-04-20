@@ -1,8 +1,8 @@
 /**
  */
-package YAWLsim.util;
+package YAWLAnnotations.util;
 
-import YAWLsim.*;
+import YAWLAnnotations.*;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
@@ -20,7 +20,7 @@ import org.pnml.tools.epnk.annotations.netannotations.TextualAnnotation;
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see YAWLsim.YAWLsimPackage
+ * @see YAWLAnnotations.YAWLsimPackage
  * @generated
  */
 public class YAWLsimAdapterFactory extends AdapterFactoryImpl {
@@ -116,13 +116,13 @@ public class YAWLsimAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link YAWLsim.EnabledTrasition <em>Enabled Trasition</em>}'.
+	 * Creates a new adapter for an object of class '{@link YAWLAnnotations.EnabledTrasition <em>Enabled Trasition</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see YAWLsim.EnabledTrasition
+	 * @see YAWLAnnotations.EnabledTrasition
 	 * @generated
 	 */
 	public Adapter createEnabledTrasitionAdapter() {
@@ -130,13 +130,13 @@ public class YAWLsimAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link YAWLsim.SelectArc <em>Select Arc</em>}'.
+	 * Creates a new adapter for an object of class '{@link YAWLAnnotations.SelectArc <em>Select Arc</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see YAWLsim.SelectArc
+	 * @see YAWLAnnotations.SelectArc
 	 * @generated
 	 */
 	public Adapter createSelectArcAdapter() {
@@ -144,13 +144,13 @@ public class YAWLsimAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link YAWLsim.Marking <em>Marking</em>}'.
+	 * Creates a new adapter for an object of class '{@link YAWLAnnotations.Marking <em>Marking</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see YAWLsim.Marking
+	 * @see YAWLAnnotations.Marking
 	 * @generated
 	 */
 	public Adapter createMarkingAdapter() {

@@ -1,11 +1,10 @@
 /**
  */
-package YAWLsim.impl;
+package YAWLAnnotations.impl;
 
-import YAWLsim.EnabledTrasition;
-import YAWLsim.SelectArc;
-import YAWLsim.YAWLsimPackage;
-
+import YAWLAnnotations.EnabledTrasition;
+import YAWLAnnotations.SelectArc;
+import YAWLAnnotations.YAWLAnnotationsPackage;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -23,9 +22,9 @@ import org.pnml.tools.epnk.annotations.netannotations.impl.ObjectAnnotationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link YAWLsim.impl.SelectArcImpl#getSourceTransition <em>Source Transition</em>}</li>
- *   <li>{@link YAWLsim.impl.SelectArcImpl#getTargetTransition <em>Target Transition</em>}</li>
- *   <li>{@link YAWLsim.impl.SelectArcImpl#isSelected <em>Selected</em>}</li>
+ *   <li>{@link YAWLAnnotations.impl.SelectArcImpl#getSourceTransition <em>Source Transition</em>}</li>
+ *   <li>{@link YAWLAnnotations.impl.SelectArcImpl#getTargetTransition <em>Target Transition</em>}</li>
+ *   <li>{@link YAWLAnnotations.impl.SelectArcImpl#isSelected <em>Selected</em>}</li>
  * </ul>
  *
  * @generated
@@ -87,7 +86,7 @@ public class SelectArcImpl extends ObjectAnnotationImpl implements SelectArc {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return YAWLsimPackage.Literals.SELECT_ARC;
+		return YAWLAnnotationsPackage.Literals.SELECT_ARC;
 	}
 
 	/**
@@ -101,7 +100,7 @@ public class SelectArcImpl extends ObjectAnnotationImpl implements SelectArc {
 			sourceTransition = (EnabledTrasition)eResolveProxy(oldSourceTransition);
 			if (sourceTransition != oldSourceTransition) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, YAWLsimPackage.SELECT_ARC__SOURCE_TRANSITION, oldSourceTransition, sourceTransition));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, YAWLAnnotationsPackage.SELECT_ARC__SOURCE_TRANSITION, oldSourceTransition, sourceTransition));
 			}
 		}
 		return sourceTransition;
@@ -125,7 +124,7 @@ public class SelectArcImpl extends ObjectAnnotationImpl implements SelectArc {
 		EnabledTrasition oldSourceTransition = sourceTransition;
 		sourceTransition = newSourceTransition;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, YAWLsimPackage.SELECT_ARC__SOURCE_TRANSITION, oldSourceTransition, sourceTransition));
+			eNotify(new ENotificationImpl(this, Notification.SET, YAWLAnnotationsPackage.SELECT_ARC__SOURCE_TRANSITION, oldSourceTransition, sourceTransition));
 	}
 
 	/**
@@ -139,7 +138,7 @@ public class SelectArcImpl extends ObjectAnnotationImpl implements SelectArc {
 			targetTransition = (EnabledTrasition)eResolveProxy(oldTargetTransition);
 			if (targetTransition != oldTargetTransition) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, YAWLsimPackage.SELECT_ARC__TARGET_TRANSITION, oldTargetTransition, targetTransition));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, YAWLAnnotationsPackage.SELECT_ARC__TARGET_TRANSITION, oldTargetTransition, targetTransition));
 			}
 		}
 		return targetTransition;
@@ -163,7 +162,7 @@ public class SelectArcImpl extends ObjectAnnotationImpl implements SelectArc {
 		EnabledTrasition oldTargetTransition = targetTransition;
 		targetTransition = newTargetTransition;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, YAWLsimPackage.SELECT_ARC__TARGET_TRANSITION, oldTargetTransition, targetTransition));
+			eNotify(new ENotificationImpl(this, Notification.SET, YAWLAnnotationsPackage.SELECT_ARC__TARGET_TRANSITION, oldTargetTransition, targetTransition));
 	}
 
 	/**
@@ -184,7 +183,7 @@ public class SelectArcImpl extends ObjectAnnotationImpl implements SelectArc {
 		boolean oldSelected = selected;
 		selected = newSelected;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, YAWLsimPackage.SELECT_ARC__SELECTED, oldSelected, selected));
+			eNotify(new ENotificationImpl(this, Notification.SET, YAWLAnnotationsPackage.SELECT_ARC__SELECTED, oldSelected, selected));
 	}
 
 	/**
@@ -195,13 +194,13 @@ public class SelectArcImpl extends ObjectAnnotationImpl implements SelectArc {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case YAWLsimPackage.SELECT_ARC__SOURCE_TRANSITION:
+			case YAWLAnnotationsPackage.SELECT_ARC__SOURCE_TRANSITION:
 				if (resolve) return getSourceTransition();
 				return basicGetSourceTransition();
-			case YAWLsimPackage.SELECT_ARC__TARGET_TRANSITION:
+			case YAWLAnnotationsPackage.SELECT_ARC__TARGET_TRANSITION:
 				if (resolve) return getTargetTransition();
 				return basicGetTargetTransition();
-			case YAWLsimPackage.SELECT_ARC__SELECTED:
+			case YAWLAnnotationsPackage.SELECT_ARC__SELECTED:
 				return isSelected();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -215,13 +214,13 @@ public class SelectArcImpl extends ObjectAnnotationImpl implements SelectArc {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case YAWLsimPackage.SELECT_ARC__SOURCE_TRANSITION:
+			case YAWLAnnotationsPackage.SELECT_ARC__SOURCE_TRANSITION:
 				setSourceTransition((EnabledTrasition)newValue);
 				return;
-			case YAWLsimPackage.SELECT_ARC__TARGET_TRANSITION:
+			case YAWLAnnotationsPackage.SELECT_ARC__TARGET_TRANSITION:
 				setTargetTransition((EnabledTrasition)newValue);
 				return;
-			case YAWLsimPackage.SELECT_ARC__SELECTED:
+			case YAWLAnnotationsPackage.SELECT_ARC__SELECTED:
 				setSelected((Boolean)newValue);
 				return;
 		}
@@ -236,13 +235,13 @@ public class SelectArcImpl extends ObjectAnnotationImpl implements SelectArc {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case YAWLsimPackage.SELECT_ARC__SOURCE_TRANSITION:
+			case YAWLAnnotationsPackage.SELECT_ARC__SOURCE_TRANSITION:
 				setSourceTransition((EnabledTrasition)null);
 				return;
-			case YAWLsimPackage.SELECT_ARC__TARGET_TRANSITION:
+			case YAWLAnnotationsPackage.SELECT_ARC__TARGET_TRANSITION:
 				setTargetTransition((EnabledTrasition)null);
 				return;
-			case YAWLsimPackage.SELECT_ARC__SELECTED:
+			case YAWLAnnotationsPackage.SELECT_ARC__SELECTED:
 				setSelected(SELECTED_EDEFAULT);
 				return;
 		}
@@ -257,11 +256,11 @@ public class SelectArcImpl extends ObjectAnnotationImpl implements SelectArc {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case YAWLsimPackage.SELECT_ARC__SOURCE_TRANSITION:
+			case YAWLAnnotationsPackage.SELECT_ARC__SOURCE_TRANSITION:
 				return sourceTransition != null;
-			case YAWLsimPackage.SELECT_ARC__TARGET_TRANSITION:
+			case YAWLAnnotationsPackage.SELECT_ARC__TARGET_TRANSITION:
 				return targetTransition != null;
-			case YAWLsimPackage.SELECT_ARC__SELECTED:
+			case YAWLAnnotationsPackage.SELECT_ARC__SELECTED:
 				return selected != SELECTED_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

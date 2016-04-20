@@ -1,8 +1,8 @@
 /**
  */
-package YAWLsim.impl;
+package YAWLAnnotations.impl;
 
-import YAWLsim.*;
+import YAWLAnnotations.*;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
@@ -18,24 +18,24 @@ import org.eclipse.emf.ecore.plugin.EcorePlugin;
  * <!-- end-user-doc -->
  * @generated
  */
-public class YAWLsimFactoryImpl extends EFactoryImpl implements YAWLsimFactory {
+public class YAWLAnnotationsFactoryImpl extends EFactoryImpl implements YAWLAnnotationsFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static YAWLsimFactory init() {
+	public static YAWLAnnotationsFactory init() {
 		try {
-			YAWLsimFactory theYAWLsimFactory = (YAWLsimFactory)EPackage.Registry.INSTANCE.getEFactory(YAWLsimPackage.eNS_URI);
-			if (theYAWLsimFactory != null) {
-				return theYAWLsimFactory;
+			YAWLAnnotationsFactory theYAWLAnnotationsFactory = (YAWLAnnotationsFactory)EPackage.Registry.INSTANCE.getEFactory(YAWLAnnotationsPackage.eNS_URI);
+			if (theYAWLAnnotationsFactory != null) {
+				return theYAWLAnnotationsFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new YAWLsimFactoryImpl();
+		return new YAWLAnnotationsFactoryImpl();
 	}
 
 	/**
@@ -44,7 +44,7 @@ public class YAWLsimFactoryImpl extends EFactoryImpl implements YAWLsimFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public YAWLsimFactoryImpl() {
+	public YAWLAnnotationsFactoryImpl() {
 		super();
 	}
 
@@ -56,9 +56,9 @@ public class YAWLsimFactoryImpl extends EFactoryImpl implements YAWLsimFactory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case YAWLsimPackage.ENABLED_TRASITION: return createEnabledTrasition();
-			case YAWLsimPackage.SELECT_ARC: return createSelectArc();
-			case YAWLsimPackage.MARKING: return createMarking();
+			case YAWLAnnotationsPackage.ENABLED_TRASITION: return createEnabledTrasition();
+			case YAWLAnnotationsPackage.SELECT_ARC: return createSelectArc();
+			case YAWLAnnotationsPackage.MARKING: return createMarking();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -99,8 +99,8 @@ public class YAWLsimFactoryImpl extends EFactoryImpl implements YAWLsimFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public YAWLsimPackage getYAWLsimPackage() {
-		return (YAWLsimPackage)getEPackage();
+	public YAWLAnnotationsPackage getYAWLAnnotationsPackage() {
+		return (YAWLAnnotationsPackage)getEPackage();
 	}
 
 	/**
@@ -110,8 +110,8 @@ public class YAWLsimFactoryImpl extends EFactoryImpl implements YAWLsimFactory {
 	 * @generated
 	 */
 	@Deprecated
-	public static YAWLsimPackage getPackage() {
-		return YAWLsimPackage.eINSTANCE;
+	public static YAWLAnnotationsPackage getPackage() {
+		return YAWLAnnotationsPackage.eINSTANCE;
 	}
 
-} //YAWLsimFactoryImpl
+} //YAWLAnnotationsFactoryImpl

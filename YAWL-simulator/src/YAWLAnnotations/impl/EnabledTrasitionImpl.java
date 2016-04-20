@@ -1,11 +1,10 @@
 /**
  */
-package YAWLsim.impl;
+package YAWLAnnotations.impl;
 
-import YAWLsim.EnabledTrasition;
-import YAWLsim.SelectArc;
-import YAWLsim.YAWLsimPackage;
-
+import YAWLAnnotations.EnabledTrasition;
+import YAWLAnnotations.SelectArc;
+import YAWLAnnotations.YAWLAnnotationsPackage;
 import java.util.Collection;
 
 import org.eclipse.emf.common.util.EList;
@@ -24,8 +23,8 @@ import org.pnml.tools.epnk.annotations.netannotations.impl.ObjectAnnotationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link YAWLsim.impl.EnabledTrasitionImpl#getOutArcs <em>Out Arcs</em>}</li>
- *   <li>{@link YAWLsim.impl.EnabledTrasitionImpl#getInArcs <em>In Arcs</em>}</li>
+ *   <li>{@link YAWLAnnotations.impl.EnabledTrasitionImpl#getOutArcs <em>Out Arcs</em>}</li>
+ *   <li>{@link YAWLAnnotations.impl.EnabledTrasitionImpl#getInArcs <em>In Arcs</em>}</li>
  * </ul>
  *
  * @generated
@@ -67,7 +66,7 @@ public class EnabledTrasitionImpl extends ObjectAnnotationImpl implements Enable
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return YAWLsimPackage.Literals.ENABLED_TRASITION;
+		return YAWLAnnotationsPackage.Literals.ENABLED_TRASITION;
 	}
 
 	/**
@@ -77,7 +76,7 @@ public class EnabledTrasitionImpl extends ObjectAnnotationImpl implements Enable
 	 */
 	public EList<SelectArc> getOutArcs() {
 		if (outArcs == null) {
-			outArcs = new EObjectResolvingEList<SelectArc>(SelectArc.class, this, YAWLsimPackage.ENABLED_TRASITION__OUT_ARCS);
+			outArcs = new EObjectResolvingEList<SelectArc>(SelectArc.class, this, YAWLAnnotationsPackage.ENABLED_TRASITION__OUT_ARCS);
 		}
 		return outArcs;
 	}
@@ -89,7 +88,7 @@ public class EnabledTrasitionImpl extends ObjectAnnotationImpl implements Enable
 	 */
 	public EList<SelectArc> getInArcs() {
 		if (inArcs == null) {
-			inArcs = new EObjectResolvingEList<SelectArc>(SelectArc.class, this, YAWLsimPackage.ENABLED_TRASITION__IN_ARCS);
+			inArcs = new EObjectResolvingEList<SelectArc>(SelectArc.class, this, YAWLAnnotationsPackage.ENABLED_TRASITION__IN_ARCS);
 		}
 		return inArcs;
 	}
@@ -102,9 +101,9 @@ public class EnabledTrasitionImpl extends ObjectAnnotationImpl implements Enable
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case YAWLsimPackage.ENABLED_TRASITION__OUT_ARCS:
+			case YAWLAnnotationsPackage.ENABLED_TRASITION__OUT_ARCS:
 				return getOutArcs();
-			case YAWLsimPackage.ENABLED_TRASITION__IN_ARCS:
+			case YAWLAnnotationsPackage.ENABLED_TRASITION__IN_ARCS:
 				return getInArcs();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -119,11 +118,11 @@ public class EnabledTrasitionImpl extends ObjectAnnotationImpl implements Enable
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case YAWLsimPackage.ENABLED_TRASITION__OUT_ARCS:
+			case YAWLAnnotationsPackage.ENABLED_TRASITION__OUT_ARCS:
 				getOutArcs().clear();
 				getOutArcs().addAll((Collection<? extends SelectArc>)newValue);
 				return;
-			case YAWLsimPackage.ENABLED_TRASITION__IN_ARCS:
+			case YAWLAnnotationsPackage.ENABLED_TRASITION__IN_ARCS:
 				getInArcs().clear();
 				getInArcs().addAll((Collection<? extends SelectArc>)newValue);
 				return;
@@ -139,10 +138,10 @@ public class EnabledTrasitionImpl extends ObjectAnnotationImpl implements Enable
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case YAWLsimPackage.ENABLED_TRASITION__OUT_ARCS:
+			case YAWLAnnotationsPackage.ENABLED_TRASITION__OUT_ARCS:
 				getOutArcs().clear();
 				return;
-			case YAWLsimPackage.ENABLED_TRASITION__IN_ARCS:
+			case YAWLAnnotationsPackage.ENABLED_TRASITION__IN_ARCS:
 				getInArcs().clear();
 				return;
 		}
@@ -157,9 +156,9 @@ public class EnabledTrasitionImpl extends ObjectAnnotationImpl implements Enable
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case YAWLsimPackage.ENABLED_TRASITION__OUT_ARCS:
+			case YAWLAnnotationsPackage.ENABLED_TRASITION__OUT_ARCS:
 				return outArcs != null && !outArcs.isEmpty();
-			case YAWLsimPackage.ENABLED_TRASITION__IN_ARCS:
+			case YAWLAnnotationsPackage.ENABLED_TRASITION__IN_ARCS:
 				return inArcs != null && !inArcs.isEmpty();
 		}
 		return super.eIsSet(featureID);

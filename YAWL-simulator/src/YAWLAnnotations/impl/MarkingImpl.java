@@ -1,14 +1,16 @@
 /**
  */
-package YAWLsim.impl;
+package YAWLAnnotations.impl;
 
-import YAWLsim.Marking;
-import YAWLsim.YAWLsimPackage;
+import YAWLAnnotations.Marking;
+import YAWLAnnotations.YAWLAnnotationsPackage;
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.pnml.tools.epnk.annotations.netannotations.impl.ObjectAnnotationImpl;
 
 /**
@@ -19,7 +21,7 @@ import org.pnml.tools.epnk.annotations.netannotations.impl.ObjectAnnotationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link YAWLsim.impl.MarkingImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link YAWLAnnotations.impl.MarkingImpl#getValue <em>Value</em>}</li>
  * </ul>
  *
  * @generated
@@ -61,7 +63,7 @@ public class MarkingImpl extends ObjectAnnotationImpl implements Marking {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return YAWLsimPackage.Literals.MARKING;
+		return YAWLAnnotationsPackage.Literals.MARKING;
 	}
 
 	/**
@@ -82,7 +84,7 @@ public class MarkingImpl extends ObjectAnnotationImpl implements Marking {
 		int oldValue = value;
 		value = newValue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, YAWLsimPackage.MARKING__VALUE, oldValue, value));
+			eNotify(new ENotificationImpl(this, Notification.SET, YAWLAnnotationsPackage.MARKING__VALUE, oldValue, value));
 	}
 
 	/**
@@ -91,7 +93,7 @@ public class MarkingImpl extends ObjectAnnotationImpl implements Marking {
 	 * @generated NOT
 	 */
 	public EAttribute getAnnotationAttribute() {
-		return YAWLsimPackage.eINSTANCE.getMarking_Value();
+		return YAWLAnnotationsPackage.eINSTANCE.getMarking_Value();
 	}
 
 	/**
@@ -102,7 +104,7 @@ public class MarkingImpl extends ObjectAnnotationImpl implements Marking {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case YAWLsimPackage.MARKING__VALUE:
+			case YAWLAnnotationsPackage.MARKING__VALUE:
 				return getValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -116,7 +118,7 @@ public class MarkingImpl extends ObjectAnnotationImpl implements Marking {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case YAWLsimPackage.MARKING__VALUE:
+			case YAWLAnnotationsPackage.MARKING__VALUE:
 				setValue((Integer)newValue);
 				return;
 		}
@@ -131,7 +133,7 @@ public class MarkingImpl extends ObjectAnnotationImpl implements Marking {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case YAWLsimPackage.MARKING__VALUE:
+			case YAWLAnnotationsPackage.MARKING__VALUE:
 				setValue(VALUE_EDEFAULT);
 				return;
 		}
@@ -146,7 +148,7 @@ public class MarkingImpl extends ObjectAnnotationImpl implements Marking {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case YAWLsimPackage.MARKING__VALUE:
+			case YAWLAnnotationsPackage.MARKING__VALUE:
 				return value != VALUE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

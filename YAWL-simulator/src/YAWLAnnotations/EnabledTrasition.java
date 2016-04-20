@@ -1,6 +1,6 @@
 /**
  */
-package YAWLsim;
+package YAWLAnnotations;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -15,18 +15,18 @@ import org.pnml.tools.epnk.annotations.netannotations.ObjectAnnotation;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link YAWLsim.EnabledTrasition#getOutArcs <em>Out Arcs</em>}</li>
- *   <li>{@link YAWLsim.EnabledTrasition#getInArcs <em>In Arcs</em>}</li>
+ *   <li>{@link YAWLAnnotations.EnabledTrasition#getOutArcs <em>Out Arcs</em>}</li>
+ *   <li>{@link YAWLAnnotations.EnabledTrasition#getInArcs <em>In Arcs</em>}</li>
  * </ul>
  *
- * @see YAWLsim.YAWLsimPackage#getEnabledTrasition()
+ * @see YAWLAnnotations.YAWLAnnotationsPackage#getEnabledTrasition()
  * @model
  * @generated
  */
 public interface EnabledTrasition extends ObjectAnnotation {
 	/**
 	 * Returns the value of the '<em><b>Out Arcs</b></em>' reference list.
-	 * The list contents are of type {@link YAWLsim.SelectArc}.
+	 * The list contents are of type {@link YAWLAnnotations.SelectArc}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Out Arcs</em>' reference list isn't clear,
@@ -34,7 +34,7 @@ public interface EnabledTrasition extends ObjectAnnotation {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Out Arcs</em>' reference list.
-	 * @see YAWLsim.YAWLsimPackage#getEnabledTrasition_OutArcs()
+	 * @see YAWLAnnotations.YAWLAnnotationsPackage#getEnabledTrasition_OutArcs()
 	 * @model
 	 * @generated
 	 */
@@ -42,7 +42,7 @@ public interface EnabledTrasition extends ObjectAnnotation {
 
 	/**
 	 * Returns the value of the '<em><b>In Arcs</b></em>' reference list.
-	 * The list contents are of type {@link YAWLsim.SelectArc}.
+	 * The list contents are of type {@link YAWLAnnotations.SelectArc}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>In Arcs</em>' reference list isn't clear,
@@ -50,7 +50,7 @@ public interface EnabledTrasition extends ObjectAnnotation {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>In Arcs</em>' reference list.
-	 * @see YAWLsim.YAWLsimPackage#getEnabledTrasition_InArcs()
+	 * @see YAWLAnnotations.YAWLAnnotationsPackage#getEnabledTrasition_InArcs()
 	 * @model
 	 * @generated
 	 */

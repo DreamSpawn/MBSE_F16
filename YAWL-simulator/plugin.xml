@@ -10,8 +10,16 @@
       <!-- @generated Yawl_sim -->
       <package
             uri="westh.it/YAWLsim"
-            class="YAWLsim.YAWLsimPackage"
-            genModel="model/Yawl_sim.genmodel"/>
+            class="YAWLAnnotation.YAWLsimPackage"
+            genModel="model/YawlAnnotations.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated YawlAnnotations -->
+      <package
+            uri="westh.it/YAWLsim"
+            class="YAWLAnnotations.YAWLAnnotationsPackage"
+            genModel="model/YawlAnnotations.genmodel"/>
    </extension>
 
 </plugin>
