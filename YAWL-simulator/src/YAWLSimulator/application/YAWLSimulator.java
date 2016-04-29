@@ -1,7 +1,7 @@
-package YAWLSimulator;
+package YAWLSimulator.application;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.HashSet;
+import java.util.Set;
 
 import org.pnml.tools.epnk.annotations.netannotations.NetAnnotation;
 import org.pnml.tools.epnk.annotations.netannotations.NetannotationsFactory;
@@ -14,6 +14,7 @@ import org.pnml.tools.epnk.pnmlcoremodel.TransitionNode;
 
 import YAWLAnnotations.EnabledTrasition;
 import YAWLAnnotations.Marking;
+import YAWLAnnotations.SelectArc;
 import YAWLAnnotations.YAWLsimFactory;
 import YAWL_net.Arc;
 import YAWL_net.ArcTypes;
@@ -34,42 +35,66 @@ public class YAWLSimulator extends ApplicationWithUIManager {
 		FlatAccess flatNet = new FlatAccess(this.getPetrinet());
 		NetAnnotation initialAnnotation = NetannotationsFactory.eINSTANCE.createNetAnnotation();
 
-		Map<Place, Integer> placeMarkings = setStartPlaceMarking(initialAnnotation, flatNet);
+		Set<Place> placeMarkings = setStartPlaceMarking(initialAnnotation, flatNet);
 		setEnabledTrasitions(initialAnnotation, flatNet, placeMarkings);
-		setSelctArcs(initialAnnotation);
+		setSelctArcs(initialAnnotation, placeMarkings);
 		initialAnnotation.setNet(this.getPetrinet());
 
 		this.getNetAnnotations().getNetAnnotations().add(initialAnnotation);
 		this.getNetAnnotations().setCurrent(initialAnnotation);
 	}
 
-	private void setSelctArcs(NetAnnotation annotation) {
+	private void setSelctArcs(NetAnnotation annotation, Set<Place> placeMarking) {
 		// TODO Auto-generated method stub
-		for (ObjectAnnotation objectAnnotation: annotation.getObjectAnnotations()){
-			if (objectAnnotation instanceof EnabledTrasition){
+		for (ObjectAnnotation objectAnnotation : annotation.getObjectAnnotations()) {
+			if (objectAnnotation instanceof EnabledTrasition) {
 				EnabledTrasition transition = (EnabledTrasition) objectAnnotation;
-				if (transition.getObject() instanceof Transition){
+				if (transition.getObject() instanceof Transition) {
 					Transition yawlTransition = (Transition) transition.getObject();
-					if (yawlTransition.getJoin() != null && yawlTransition.getJoin().getText().equals(TransitionTypes.XOR)){
-						
+					if (yawlTransition.getJoin() != null
+							&& yawlTransition.getJoin().getText().equals(TransitionTypes.XOR)) {
+						boolean first = true;
+						for (org.pnml.tools.epnk.pnmlcoremodel.Arc arc : yawlTransition.getIn()) {
+							if (placeMarking.contains(arc.getSource())) {
+								SelectArc select = YAWLsimFactory.eINSTANCE.createSelectArc();
+								select.setObject(arc);
+								select.setTargetTransition(transition);
+								if (first) {
+									select.setSelected(true);
+									first = false;
+								}
+								annotation.getObjectAnnotations().add(select);
+							}
+						}
 					}
-					if (yawlTransition.getSplit() != null && 
-						(yawlTransition.getSplit().getText().equals(TransitionTypes.OR) ||
-						yawlTransition.getSplit().getText().equals(TransitionTypes.XOR))){
-						
+					if (yawlTransition.getSplit() != null
+							&& (yawlTransition.getSplit().getText().equals(TransitionTypes.OR)
+									|| yawlTransition.getSplit().getText().equals(TransitionTypes.XOR))) {
+						boolean first = true;
+						for (org.pnml.tools.epnk.pnmlcoremodel.Arc arc : yawlTransition.getOut()) {
+							SelectArc select = YAWLsimFactory.eINSTANCE.createSelectArc();
+							select.setObject(arc);
+							select.setSourceTransition(transition);
+							if (first) {
+								select.setSelected(true);
+								if (yawlTransition.getSplit().getText().equals(TransitionTypes.XOR))
+									first = false;
+							}
+							annotation.getObjectAnnotations().add(select);
+						}
 					}
 				}
 			}
 		}
 	}
 
-	private Map<Place, Integer> setStartPlaceMarking(NetAnnotation annotation, FlatAccess flatNet) {
-		Map<Place, Integer> markingMap = new HashMap<Place, Integer>();
+	private Set<Place> setStartPlaceMarking(NetAnnotation annotation, FlatAccess flatNet) {
+		Set<Place> markingMap = new HashSet<Place>();
 		for (org.pnml.tools.epnk.pnmlcoremodel.Place place : flatNet.getPlaces()) {
 			if (place instanceof Place) {
 				Place yawlPlace = (Place) place;
 				if (yawlPlace.getType() != null && yawlPlace.getType().getText().equals(PlaceTypes.START)) {
-					markingMap.put(yawlPlace, 1);
+					markingMap.add(yawlPlace);
 					Marking marking = YAWLsimFactory.eINSTANCE.createMarking();
 					marking.setValue(1);
 					marking.setObject(place);
@@ -86,7 +111,7 @@ public class YAWLSimulator extends ApplicationWithUIManager {
 		return markingMap;
 	}
 
-	private void setEnabledTrasitions(NetAnnotation annotation, FlatAccess flatNet, Map<Place, Integer> placeMarkings) {
+	private void setEnabledTrasitions(NetAnnotation annotation, FlatAccess flatNet, Set<Place> placeMarkings) {
 		for (org.pnml.tools.epnk.pnmlcoremodel.Transition transition : flatNet.getTransitions()) {
 			if (transition instanceof Transition) {
 				Transition yawlTransition = (Transition) transition;
@@ -100,7 +125,7 @@ public class YAWLSimulator extends ApplicationWithUIManager {
 							if (yawlArc.getType() == null || yawlArc.getType().getText().equals(ArcTypes.NORMAL)) {
 								if (yawlArc.getSource() instanceof Place) {
 									Place place = (Place) yawlArc.getSource();
-									if (!placeMarkings.containsKey(place)) {
+									if (!placeMarkings.contains(place)) {
 										enabled = false;
 										break;
 									}
@@ -117,7 +142,7 @@ public class YAWLSimulator extends ApplicationWithUIManager {
 							if (yawlArc.getType() == null || yawlArc.getType().getText().equals(ArcTypes.NORMAL)) {
 								if (yawlArc.getSource() instanceof Place) {
 									Place place = (Place) yawlArc.getSource();
-									if (!placeMarkings.containsKey(place)) {
+									if (!placeMarkings.contains(place)) {
 										enabled = true;
 										break;
 									}
