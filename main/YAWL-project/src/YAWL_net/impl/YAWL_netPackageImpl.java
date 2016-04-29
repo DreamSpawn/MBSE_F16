@@ -10,7 +10,7 @@ import YAWL_net.PlaceType;
 import YAWL_net.PlaceTypes;
 import YAWL_net.Transition;
 import YAWL_net.TransitionType;
-import YAWL_net.TrasitionTypes;
+import YAWL_net.TransitionTypes;
 import YAWL_net.YAWL_NetType;
 import YAWL_net.YAWL_netFactory;
 import YAWL_net.YAWL_netPackage;
@@ -441,10 +441,10 @@ public class YAWL_netPackageImpl extends EPackageImpl implements YAWL_netPackage
 		addEEnumLiteral(placeTypesEEnum, PlaceTypes.START);
 		addEEnumLiteral(placeTypesEEnum, PlaceTypes.END);
 
-		initEEnum(trasitionTypesEEnum, TrasitionTypes.class, "TrasitionTypes");
-		addEEnumLiteral(trasitionTypesEEnum, TrasitionTypes.AND);
-		addEEnumLiteral(trasitionTypesEEnum, TrasitionTypes.OR);
-		addEEnumLiteral(trasitionTypesEEnum, TrasitionTypes.XOR);
+		initEEnum(trasitionTypesEEnum, TransitionTypes.class, "TrasitionTypes");
+		addEEnumLiteral(trasitionTypesEEnum, TransitionTypes.AND);
+		addEEnumLiteral(trasitionTypesEEnum, TransitionTypes.OR);
+		addEEnumLiteral(trasitionTypesEEnum, TransitionTypes.XOR);
 
 		initEEnum(arcTypesEEnum, ArcTypes.class, "ArcTypes");
 		addEEnumLiteral(arcTypesEEnum, ArcTypes.NORMAL);

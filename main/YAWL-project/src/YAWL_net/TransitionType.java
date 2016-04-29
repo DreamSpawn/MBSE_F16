@@ -23,7 +23,7 @@ import org.pnml.tools.epnk.pnmlcoremodel.Attribute;
 public interface TransitionType extends Attribute {
 	/**
 	 * Returns the value of the '<em><b>Text</b></em>' attribute.
-	 * The literals are from the enumeration {@link YAWL_net.TrasitionTypes}.
+	 * The literals are from the enumeration {@link YAWL_net.TransitionTypes}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Text</em>' attribute isn't clear,
@@ -31,23 +31,23 @@ public interface TransitionType extends Attribute {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Text</em>' attribute.
-	 * @see YAWL_net.TrasitionTypes
-	 * @see #setText(TrasitionTypes)
+	 * @see YAWL_net.TransitionTypes
+	 * @see #setText(TransitionTypes)
 	 * @see YAWL_net.YAWL_netPackage#getTransitionType_Text()
 	 * @model required="true"
 	 * @generated
 	 */
-	TrasitionTypes getText();
+	TransitionTypes getText();
 
 	/**
 	 * Sets the value of the '{@link YAWL_net.TransitionType#getText <em>Text</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Text</em>' attribute.
-	 * @see YAWL_net.TrasitionTypes
+	 * @see YAWL_net.TransitionTypes
 	 * @see #getText()
 	 * @generated
 	 */
-	void setText(TrasitionTypes value);
+	void setText(TransitionTypes value);
 
 } // TransitionType

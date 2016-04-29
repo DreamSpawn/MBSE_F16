@@ -202,8 +202,8 @@ public class YAWL_netFactoryImpl extends EFactoryImpl implements YAWL_netFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TrasitionTypes createTrasitionTypesFromString(EDataType eDataType, String initialValue) {
-		TrasitionTypes result = TrasitionTypes.get(initialValue);
+	public TransitionTypes createTrasitionTypesFromString(EDataType eDataType, String initialValue) {
+		TransitionTypes result = TransitionTypes.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}

@@ -3,7 +3,7 @@
 package YAWL_net.impl;
 
 import YAWL_net.TransitionType;
-import YAWL_net.TrasitionTypes;
+import YAWL_net.TransitionTypes;
 import YAWL_net.YAWL_netPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -36,7 +36,7 @@ public class TransitionTypeImpl extends AttributeImpl implements TransitionType 
 	 * @generated
 	 * @ordered
 	 */
-	protected static final TrasitionTypes TEXT_EDEFAULT = TrasitionTypes.AND;
+	protected static final TransitionTypes TEXT_EDEFAULT = TransitionTypes.AND;
 
 	/**
 	 * The cached value of the '{@link #getText() <em>Text</em>}' attribute.
@@ -46,7 +46,7 @@ public class TransitionTypeImpl extends AttributeImpl implements TransitionType 
 	 * @generated
 	 * @ordered
 	 */
-	protected TrasitionTypes text = TEXT_EDEFAULT;
+	protected TransitionTypes text = TEXT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -72,7 +72,7 @@ public class TransitionTypeImpl extends AttributeImpl implements TransitionType 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TrasitionTypes getText() {
+	public TransitionTypes getText() {
 		return text;
 	}
 
@@ -81,8 +81,8 @@ public class TransitionTypeImpl extends AttributeImpl implements TransitionType 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setText(TrasitionTypes newText) {
-		TrasitionTypes oldText = text;
+	public void setText(TransitionTypes newText) {
+		TransitionTypes oldText = text;
 		text = newText == null ? TEXT_EDEFAULT : newText;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, YAWL_netPackage.TRANSITION_TYPE__TEXT, oldText, text));
@@ -111,7 +111,7 @@ public class TransitionTypeImpl extends AttributeImpl implements TransitionType 
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case YAWL_netPackage.TRANSITION_TYPE__TEXT:
-				setText((TrasitionTypes)newValue);
+				setText((TransitionTypes)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

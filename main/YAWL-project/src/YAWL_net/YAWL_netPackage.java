@@ -535,10 +535,10 @@ public interface YAWL_netPackage extends EPackage {
 	int PLACE_TYPES = 7;
 
 	/**
-	 * The meta object id for the '{@link YAWL_net.TrasitionTypes <em>Trasition Types</em>}' enum.
+	 * The meta object id for the '{@link YAWL_net.TransitionTypes <em>Trasition Types</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see YAWL_net.TrasitionTypes
+	 * @see YAWL_net.TransitionTypes
 	 * @see YAWL_net.impl.YAWL_netPackageImpl#getTrasitionTypes()
 	 * @generated
 	 */
@@ -713,11 +713,11 @@ public interface YAWL_netPackage extends EPackage {
 	EEnum getPlaceTypes();
 
 	/**
-	 * Returns the meta object for enum '{@link YAWL_net.TrasitionTypes <em>Trasition Types</em>}'.
+	 * Returns the meta object for enum '{@link YAWL_net.TransitionTypes <em>Trasition Types</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for enum '<em>Trasition Types</em>'.
-	 * @see YAWL_net.TrasitionTypes
+	 * @see YAWL_net.TransitionTypes
 	 * @generated
 	 */
 	EEnum getTrasitionTypes();
@@ -891,10 +891,10 @@ public interface YAWL_netPackage extends EPackage {
 		EEnum PLACE_TYPES = eINSTANCE.getPlaceTypes();
 
 		/**
-		 * The meta object literal for the '{@link YAWL_net.TrasitionTypes <em>Trasition Types</em>}' enum.
+		 * The meta object literal for the '{@link YAWL_net.TransitionTypes <em>Trasition Types</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see YAWL_net.TrasitionTypes
+		 * @see YAWL_net.TransitionTypes
 		 * @see YAWL_net.impl.YAWL_netPackageImpl#getTrasitionTypes()
 		 * @generated
 		 */

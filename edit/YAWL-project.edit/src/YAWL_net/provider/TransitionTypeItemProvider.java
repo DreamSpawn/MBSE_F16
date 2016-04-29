@@ -4,7 +4,7 @@ package YAWL_net.provider;
 
 
 import YAWL_net.TransitionType;
-import YAWL_net.TrasitionTypes;
+import YAWL_net.TransitionTypes;
 import YAWL_net.YAWL_netPackage;
 
 import java.util.Collection;
@@ -96,7 +96,7 @@ public class TransitionTypeItemProvider extends AttributeItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		TrasitionTypes labelValue = ((TransitionType)object).getText();
+		TransitionTypes labelValue = ((TransitionType)object).getText();
 		String label = labelValue == null ? null : labelValue.toString();
 		return label == null || label.length() == 0 ?
 			getString("_UI_TransitionType_type") :

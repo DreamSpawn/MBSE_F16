@@ -17,7 +17,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * @model
  * @generated
  */
-public enum TrasitionTypes implements Enumerator {
+public enum TransitionTypes implements Enumerator {
 	/**
 	 * The '<em><b>AND</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -99,8 +99,8 @@ public enum TrasitionTypes implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final TrasitionTypes[] VALUES_ARRAY =
-		new TrasitionTypes[] {
+	private static final TransitionTypes[] VALUES_ARRAY =
+		new TransitionTypes[] {
 			AND,
 			OR,
 			XOR,
@@ -112,7 +112,7 @@ public enum TrasitionTypes implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final List<TrasitionTypes> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+	public static final List<TransitionTypes> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
 	/**
 	 * Returns the '<em><b>Trasition Types</b></em>' literal with the specified literal value.
@@ -122,9 +122,9 @@ public enum TrasitionTypes implements Enumerator {
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static TrasitionTypes get(String literal) {
+	public static TransitionTypes get(String literal) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			TrasitionTypes result = VALUES_ARRAY[i];
+			TransitionTypes result = VALUES_ARRAY[i];
 			if (result.toString().equals(literal)) {
 				return result;
 			}
@@ -140,9 +140,9 @@ public enum TrasitionTypes implements Enumerator {
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static TrasitionTypes getByName(String name) {
+	public static TransitionTypes getByName(String name) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			TrasitionTypes result = VALUES_ARRAY[i];
+			TransitionTypes result = VALUES_ARRAY[i];
 			if (result.getName().equals(name)) {
 				return result;
 			}
@@ -158,7 +158,7 @@ public enum TrasitionTypes implements Enumerator {
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static TrasitionTypes get(int value) {
+	public static TransitionTypes get(int value) {
 		switch (value) {
 			case AND_VALUE: return AND;
 			case OR_VALUE: return OR;
@@ -194,7 +194,7 @@ public enum TrasitionTypes implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private TrasitionTypes(int value, String name, String literal) {
+	private TransitionTypes(int value, String name, String literal) {
 		this.value = value;
 		this.name = name;
 		this.literal = literal;
