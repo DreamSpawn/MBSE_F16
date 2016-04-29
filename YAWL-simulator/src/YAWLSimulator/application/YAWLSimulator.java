@@ -1,5 +1,6 @@
 package YAWLSimulator.application;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -37,55 +38,57 @@ public class YAWLSimulator extends ApplicationWithUIManager {
 
 		Set<Place> placeMarkings = setStartPlaceMarking(initialAnnotation, flatNet);
 		setEnabledTrasitions(initialAnnotation, flatNet, placeMarkings);
-		setSelctArcs(initialAnnotation, placeMarkings);
+		setSelectArcs(initialAnnotation, placeMarkings);
 		initialAnnotation.setNet(this.getPetrinet());
 
 		this.getNetAnnotations().getNetAnnotations().add(initialAnnotation);
 		this.getNetAnnotations().setCurrent(initialAnnotation);
 	}
 
-	private void setSelctArcs(NetAnnotation annotation, Set<Place> placeMarking) {
-		// TODO Auto-generated method stub
+	private void setSelectArcs(NetAnnotation annotation, Set<Place> placeMarking) {
+		ArrayList<EnabledTrasition> trasitionList = new ArrayList<EnabledTrasition>();
 		for (ObjectAnnotation objectAnnotation : annotation.getObjectAnnotations()) {
-			if (objectAnnotation instanceof EnabledTrasition) {
-				EnabledTrasition transition = (EnabledTrasition) objectAnnotation;
-				if (transition.getObject() instanceof Transition) {
-					Transition yawlTransition = (Transition) transition.getObject();
-					if (yawlTransition.getJoin() != null
-							&& yawlTransition.getJoin().getText().equals(TransitionTypes.XOR)) {
-						boolean first = true;
-						for (org.pnml.tools.epnk.pnmlcoremodel.Arc arc : yawlTransition.getIn()) {
-							if (placeMarking.contains(arc.getSource())) {
-								SelectArc select = YAWLsimFactory.eINSTANCE.createSelectArc();
-								select.setObject(arc);
-								select.setTargetTransition(transition);
-								if (first) {
-									select.setSelected(true);
-									first = false;
-								}
-								annotation.getObjectAnnotations().add(select);
-							}
-						}
-					}
-					if (yawlTransition.getSplit() != null
-							&& (yawlTransition.getSplit().getText().equals(TransitionTypes.OR)
-									|| yawlTransition.getSplit().getText().equals(TransitionTypes.XOR))) {
-						boolean first = true;
-						for (org.pnml.tools.epnk.pnmlcoremodel.Arc arc : yawlTransition.getOut()) {
+			if (objectAnnotation instanceof EnabledTrasition)
+				trasitionList.add((EnabledTrasition) objectAnnotation);
+		}
+
+		for (EnabledTrasition transition : trasitionList) {
+			if (transition.getObject() instanceof Transition) {
+				Transition yawlTransition = (Transition) transition.getObject();
+				if (yawlTransition.getJoin() != null
+						&& yawlTransition.getJoin().getText().equals(TransitionTypes.XOR)) {
+					boolean first = true;
+					for (org.pnml.tools.epnk.pnmlcoremodel.Arc arc : yawlTransition.getIn()) {
+						if (placeMarking.contains(arc.getSource())) {
 							SelectArc select = YAWLsimFactory.eINSTANCE.createSelectArc();
 							select.setObject(arc);
-							select.setSourceTransition(transition);
+							select.setTargetTransition(transition);
 							if (first) {
 								select.setSelected(true);
-								if (yawlTransition.getSplit().getText().equals(TransitionTypes.XOR))
-									first = false;
+								first = false;
 							}
 							annotation.getObjectAnnotations().add(select);
 						}
 					}
 				}
+				if (yawlTransition.getSplit() != null && (yawlTransition.getSplit().getText().equals(TransitionTypes.OR)
+						|| yawlTransition.getSplit().getText().equals(TransitionTypes.XOR))) {
+					boolean first = true;
+					for (org.pnml.tools.epnk.pnmlcoremodel.Arc arc : yawlTransition.getOut()) {
+						SelectArc select = YAWLsimFactory.eINSTANCE.createSelectArc();
+						select.setObject(arc);
+						select.setSourceTransition(transition);
+						if (first) {
+							select.setSelected(true);
+							if (yawlTransition.getSplit().getText().equals(TransitionTypes.XOR))
+								first = false;
+						}
+						annotation.getObjectAnnotations().add(select);
+					}
+				}
 			}
 		}
+
 	}
 
 	private Set<Place> setStartPlaceMarking(NetAnnotation annotation, FlatAccess flatNet) {
@@ -142,7 +145,7 @@ public class YAWLSimulator extends ApplicationWithUIManager {
 							if (yawlArc.getType() == null || yawlArc.getType().getText().equals(ArcTypes.NORMAL)) {
 								if (yawlArc.getSource() instanceof Place) {
 									Place place = (Place) yawlArc.getSource();
-									if (!placeMarkings.contains(place)) {
+									if (placeMarkings.contains(place)) {
 										enabled = true;
 										break;
 									}
