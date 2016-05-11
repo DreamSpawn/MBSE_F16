@@ -215,9 +215,14 @@ public class YAWLSimulator extends ApplicationWithUIManager {
 					Node node = arc.getSource();
 					if (!(node instanceof Place))
 						continue;
-					//TODO check for reset arc
+					
 					Place place = (Place) node;
 					int value = placeMarkings.get(place) == null ? 0 : placeMarkings.get(place) -1;
+					if (arc instanceof Arc){
+						Arc yawl_arc = (Arc) arc;
+						if (yawl_arc.getType() != null && yawl_arc.getType().getText() == ArcTypes.RESET)
+							value = 0;
+					}
 					placeMarkings.put(place, value);
 				}
 			} else {
@@ -233,7 +238,11 @@ public class YAWLSimulator extends ApplicationWithUIManager {
 						
 						Place place = (Place) arc.getSource();
 						int value = placeMarkings.get(place) == null ? 0 : placeMarkings.get(place) -1;
-						//TODO check for reset arc
+						if (arc instanceof Arc){
+							Arc yawl_arc = (Arc) arc;
+							if (yawl_arc.getType() != null && yawl_arc.getType().getText() == ArcTypes.RESET)
+								value = 0;
+						}
 						placeMarkings.put(place, value );
 						break;
 					}
