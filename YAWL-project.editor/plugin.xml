@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated yawl_net -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="yawl_net.presentation.YAWL_netModelWizardID"
+            name="%_UI_YAWL_netModelWizard_label"
+            class="yawl_net.presentation.YAWL_netModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/YAWL_netModelFile.gif">
+         <description>%_UI_YAWL_netModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated yawl_net -->
+      <editor
+            id="yawl_net.presentation.YAWL_netEditorID"
+            name="%_UI_YAWL_netEditor_label"
+            icon="icons/full/obj16/YAWL_netModelFile.gif"
+            extensions="yawl_net"
+            class="yawl_net.presentation.YAWL_netEditor"
+            contributorClass="yawl_net.presentation.YAWL_netActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
