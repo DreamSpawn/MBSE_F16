@@ -1,6 +1,6 @@
 /**
  */
-package YAWLAnnotations;
+package yawl_annotations;
 
 import org.pnml.tools.epnk.annotations.netannotations.ObjectAnnotation;
 import org.pnml.tools.epnk.annotations.netannotations.TextualAnnotation;
@@ -14,10 +14,10 @@ import org.pnml.tools.epnk.annotations.netannotations.TextualAnnotation;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link YAWLAnnotations.Marking#getValue <em>Value</em>}</li>
+ *   <li>{@link yawl_annotations.Marking#getValue <em>Value</em>}</li>
  * </ul>
  *
- * @see YAWLAnnotations.YAWLAnnotationsPackage#getMarking()
+ * @see yawl_annotations.YAWLAnnotationsPackage#getMarking()
  * @model
  * @generated
  */
@@ -33,14 +33,14 @@ public interface Marking extends ObjectAnnotation, TextualAnnotation {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value</em>' attribute.
 	 * @see #setValue(int)
-	 * @see YAWLAnnotations.YAWLAnnotationsPackage#getMarking_Value()
+	 * @see yawl_annotations.YAWLAnnotationsPackage#getMarking_Value()
 	 * @model default="1"
 	 * @generated
 	 */
 	int getValue();
 
 	/**
-	 * Sets the value of the '{@link YAWLAnnotations.Marking#getValue <em>Value</em>}' attribute.
+	 * Sets the value of the '{@link yawl_annotations.Marking#getValue <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Value</em>' attribute.

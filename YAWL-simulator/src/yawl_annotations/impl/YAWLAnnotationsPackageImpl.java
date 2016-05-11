@@ -1,12 +1,6 @@
 /**
  */
-package YAWLAnnotations.impl;
-
-import YAWLAnnotations.EnabledTrasition;
-import YAWLAnnotations.Marking;
-import YAWLAnnotations.SelectArc;
-import YAWLAnnotations.YAWLsimFactory;
-import YAWLAnnotations.YAWLsimPackage;
+package yawl_annotations.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -17,13 +11,19 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.pnml.tools.epnk.annotations.netannotations.NetannotationsPackage;
 
+import yawl_annotations.EnabledTrasition;
+import yawl_annotations.Marking;
+import yawl_annotations.SelectArc;
+import yawl_annotations.YAWLAnnotationsFactory;
+import yawl_annotations.YAWLAnnotationsPackage;
+
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model <b>Package</b>.
  * <!-- end-user-doc -->
  * @generated
  */
-public class YAWLsimPackageImpl extends EPackageImpl implements YAWLsimPackage {
+public class YAWLAnnotationsPackageImpl extends EPackageImpl implements YAWLAnnotationsPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -56,12 +56,12 @@ public class YAWLsimPackageImpl extends EPackageImpl implements YAWLsimPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see YAWLAnnotations.YAWLsimPackage#eNS_URI
+	 * @see yawl_annotations.YAWLAnnotationsPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private YAWLsimPackageImpl() {
-		super(eNS_URI, YAWLsimFactory.eINSTANCE);
+	private YAWLAnnotationsPackageImpl() {
+		super(eNS_URI, YAWLAnnotationsFactory.eINSTANCE);
 	}
 
 	/**
@@ -74,7 +74,7 @@ public class YAWLsimPackageImpl extends EPackageImpl implements YAWLsimPackage {
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link YAWLsimPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link YAWLAnnotationsPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -83,11 +83,11 @@ public class YAWLsimPackageImpl extends EPackageImpl implements YAWLsimPackage {
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static YAWLsimPackage init() {
-		if (isInited) return (YAWLsimPackage)EPackage.Registry.INSTANCE.getEPackage(YAWLsimPackage.eNS_URI);
+	public static YAWLAnnotationsPackage init() {
+		if (isInited) return (YAWLAnnotationsPackage)EPackage.Registry.INSTANCE.getEPackage(YAWLAnnotationsPackage.eNS_URI);
 
 		// Obtain or create and register package
-		YAWLsimPackageImpl theYAWLsimPackage = (YAWLsimPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof YAWLsimPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new YAWLsimPackageImpl());
+		YAWLAnnotationsPackageImpl theYAWLAnnotationsPackage = (YAWLAnnotationsPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof YAWLAnnotationsPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new YAWLAnnotationsPackageImpl());
 
 		isInited = true;
 
@@ -95,18 +95,18 @@ public class YAWLsimPackageImpl extends EPackageImpl implements YAWLsimPackage {
 		NetannotationsPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
-		theYAWLsimPackage.createPackageContents();
+		theYAWLAnnotationsPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theYAWLsimPackage.initializePackageContents();
+		theYAWLAnnotationsPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theYAWLsimPackage.freeze();
+		theYAWLAnnotationsPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(YAWLsimPackage.eNS_URI, theYAWLsimPackage);
-		return theYAWLsimPackage;
+		EPackage.Registry.INSTANCE.put(YAWLAnnotationsPackage.eNS_URI, theYAWLAnnotationsPackage);
+		return theYAWLAnnotationsPackage;
 	}
 
 	/**
@@ -195,8 +195,8 @@ public class YAWLsimPackageImpl extends EPackageImpl implements YAWLsimPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public YAWLsimFactory getYAWLsimFactory() {
-		return (YAWLsimFactory)getEFactoryInstance();
+	public YAWLAnnotationsFactory getYAWLAnnotationsFactory() {
+		return (YAWLAnnotationsFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -284,4 +284,4 @@ public class YAWLsimPackageImpl extends EPackageImpl implements YAWLsimPackage {
 		createResource(eNS_URI);
 	}
 
-} //YAWLsimPackageImpl
+} //YAWLAnnotationsPackageImpl

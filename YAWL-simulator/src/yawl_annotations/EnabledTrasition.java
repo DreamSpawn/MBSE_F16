@@ -1,6 +1,6 @@
 /**
  */
-package YAWLAnnotations;
+package yawl_annotations;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -15,18 +15,18 @@ import org.pnml.tools.epnk.annotations.netannotations.ObjectAnnotation;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link YAWLAnnotations.EnabledTrasition#getOutArcs <em>Out Arcs</em>}</li>
- *   <li>{@link YAWLAnnotations.EnabledTrasition#getInArcs <em>In Arcs</em>}</li>
+ *   <li>{@link yawl_annotations.EnabledTrasition#getOutArcs <em>Out Arcs</em>}</li>
+ *   <li>{@link yawl_annotations.EnabledTrasition#getInArcs <em>In Arcs</em>}</li>
  * </ul>
  *
- * @see YAWLAnnotations.YAWLAnnotationsPackage#getEnabledTrasition()
+ * @see yawl_annotations.YAWLAnnotationsPackage#getEnabledTrasition()
  * @model
  * @generated
  */
 public interface EnabledTrasition extends ObjectAnnotation {
 	/**
 	 * Returns the value of the '<em><b>Out Arcs</b></em>' reference list.
-	 * The list contents are of type {@link YAWLAnnotations.SelectArc}.
+	 * The list contents are of type {@link yawl_annotations.SelectArc}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Out Arcs</em>' reference list isn't clear,
@@ -34,7 +34,7 @@ public interface EnabledTrasition extends ObjectAnnotation {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Out Arcs</em>' reference list.
-	 * @see YAWLAnnotations.YAWLAnnotationsPackage#getEnabledTrasition_OutArcs()
+	 * @see yawl_annotations.YAWLAnnotationsPackage#getEnabledTrasition_OutArcs()
 	 * @model
 	 * @generated
 	 */
@@ -42,7 +42,7 @@ public interface EnabledTrasition extends ObjectAnnotation {
 
 	/**
 	 * Returns the value of the '<em><b>In Arcs</b></em>' reference list.
-	 * The list contents are of type {@link YAWLAnnotations.SelectArc}.
+	 * The list contents are of type {@link yawl_annotations.SelectArc}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>In Arcs</em>' reference list isn't clear,
@@ -50,7 +50,7 @@ public interface EnabledTrasition extends ObjectAnnotation {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>In Arcs</em>' reference list.
-	 * @see YAWLAnnotations.YAWLAnnotationsPackage#getEnabledTrasition_InArcs()
+	 * @see yawl_annotations.YAWLAnnotationsPackage#getEnabledTrasition_InArcs()
 	 * @model
 	 * @generated
 	 */

@@ -1,10 +1,7 @@
 /**
  */
-package YAWLAnnotations.impl;
+package yawl_annotations.impl;
 
-import YAWLAnnotations.EnabledTrasition;
-import YAWLAnnotations.SelectArc;
-import YAWLAnnotations.YAWLAnnotationsPackage;
 import java.util.Collection;
 
 import org.eclipse.emf.common.util.EList;
@@ -15,6 +12,10 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 import org.pnml.tools.epnk.annotations.netannotations.impl.ObjectAnnotationImpl;
 
+import yawl_annotations.EnabledTrasition;
+import yawl_annotations.SelectArc;
+import yawl_annotations.YAWLAnnotationsPackage;
+
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Enabled Trasition</b></em>'.
@@ -23,8 +24,8 @@ import org.pnml.tools.epnk.annotations.netannotations.impl.ObjectAnnotationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link YAWLAnnotations.impl.EnabledTrasitionImpl#getOutArcs <em>Out Arcs</em>}</li>
- *   <li>{@link YAWLAnnotations.impl.EnabledTrasitionImpl#getInArcs <em>In Arcs</em>}</li>
+ *   <li>{@link yawl_annotations.impl.EnabledTrasitionImpl#getOutArcs <em>Out Arcs</em>}</li>
+ *   <li>{@link yawl_annotations.impl.EnabledTrasitionImpl#getInArcs <em>In Arcs</em>}</li>
  * </ul>
  *
  * @generated

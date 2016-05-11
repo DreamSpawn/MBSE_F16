@@ -1,10 +1,10 @@
-package YAWLSimulator.application;
+package yawl_simulator.application;
 
 import org.pnml.tools.epnk.applications.ApplicationFactory;
 import org.pnml.tools.epnk.applications.ApplicationWithUIManager;
 import org.pnml.tools.epnk.pnmlcoremodel.PetriNet;
 
-import YAWL_net.YAWL_NetType;
+import yawl_net.YAWL_NetType;
 
 public class YAWLSimulatorFactory extends ApplicationFactory {
 

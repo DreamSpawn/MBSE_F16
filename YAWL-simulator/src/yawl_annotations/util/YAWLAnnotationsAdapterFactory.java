@@ -1,8 +1,6 @@
 /**
  */
-package YAWLAnnotations.util;
-
-import YAWLAnnotations.*;
+package yawl_annotations.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
@@ -15,22 +13,24 @@ import org.pnml.tools.epnk.annotations.netannotations.Annotation;
 import org.pnml.tools.epnk.annotations.netannotations.ObjectAnnotation;
 import org.pnml.tools.epnk.annotations.netannotations.TextualAnnotation;
 
+import yawl_annotations.*;
+
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see YAWLAnnotations.YAWLsimPackage
+ * @see yawl_annotations.YAWLAnnotationsPackage
  * @generated
  */
-public class YAWLsimAdapterFactory extends AdapterFactoryImpl {
+public class YAWLAnnotationsAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static YAWLsimPackage modelPackage;
+	protected static YAWLAnnotationsPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -38,9 +38,9 @@ public class YAWLsimAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public YAWLsimAdapterFactory() {
+	public YAWLAnnotationsAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = YAWLsimPackage.eINSTANCE;
+			modelPackage = YAWLAnnotationsPackage.eINSTANCE;
 		}
 	}
 
@@ -69,8 +69,8 @@ public class YAWLsimAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected YAWLsimSwitch<Adapter> modelSwitch =
-		new YAWLsimSwitch<Adapter>() {
+	protected YAWLAnnotationsSwitch<Adapter> modelSwitch =
+		new YAWLAnnotationsSwitch<Adapter>() {
 			@Override
 			public Adapter caseEnabledTrasition(EnabledTrasition object) {
 				return createEnabledTrasitionAdapter();
@@ -116,13 +116,13 @@ public class YAWLsimAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link YAWLAnnotations.EnabledTrasition <em>Enabled Trasition</em>}'.
+	 * Creates a new adapter for an object of class '{@link yawl_annotations.EnabledTrasition <em>Enabled Trasition</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see YAWLAnnotations.EnabledTrasition
+	 * @see yawl_annotations.EnabledTrasition
 	 * @generated
 	 */
 	public Adapter createEnabledTrasitionAdapter() {
@@ -130,13 +130,13 @@ public class YAWLsimAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link YAWLAnnotations.SelectArc <em>Select Arc</em>}'.
+	 * Creates a new adapter for an object of class '{@link yawl_annotations.SelectArc <em>Select Arc</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see YAWLAnnotations.SelectArc
+	 * @see yawl_annotations.SelectArc
 	 * @generated
 	 */
 	public Adapter createSelectArcAdapter() {
@@ -144,13 +144,13 @@ public class YAWLsimAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link YAWLAnnotations.Marking <em>Marking</em>}'.
+	 * Creates a new adapter for an object of class '{@link yawl_annotations.Marking <em>Marking</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see YAWLAnnotations.Marking
+	 * @see yawl_annotations.Marking
 	 * @generated
 	 */
 	public Adapter createMarkingAdapter() {
@@ -211,4 +211,4 @@ public class YAWLsimAdapterFactory extends AdapterFactoryImpl {
 		return null;
 	}
 
-} //YAWLsimAdapterFactory
+} //YAWLAnnotationsAdapterFactory

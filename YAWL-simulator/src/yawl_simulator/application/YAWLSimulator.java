@@ -1,4 +1,4 @@
-package YAWLSimulator.application;
+package yawl_simulator.application;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -13,16 +13,16 @@ import org.pnml.tools.epnk.pnmlcoremodel.PetriNet;
 import org.pnml.tools.epnk.pnmlcoremodel.PlaceNode;
 import org.pnml.tools.epnk.pnmlcoremodel.TransitionNode;
 
-import YAWLAnnotations.EnabledTrasition;
-import YAWLAnnotations.Marking;
-import YAWLAnnotations.SelectArc;
-import YAWLAnnotations.YAWLsimFactory;
-import YAWL_net.Arc;
-import YAWL_net.ArcTypes;
-import YAWL_net.Place;
-import YAWL_net.PlaceTypes;
-import YAWL_net.Transition;
-import YAWL_net.TransitionTypes;
+import yawl_annotations.EnabledTrasition;
+import yawl_annotations.Marking;
+import yawl_annotations.SelectArc;
+import yawl_net.Arc;
+import yawl_net.ArcTypes;
+import yawl_net.Place;
+import yawl_net.PlaceTypes;
+import yawl_net.Transition;
+import yawl_net.TransitionTypes;
+import yawl_annotations.YAWLAnnotationsFactory;
 
 public class YAWLSimulator extends ApplicationWithUIManager {
 
@@ -60,7 +60,7 @@ public class YAWLSimulator extends ApplicationWithUIManager {
 					boolean first = true;
 					for (org.pnml.tools.epnk.pnmlcoremodel.Arc arc : yawlTransition.getIn()) {
 						if (placeMarking.contains(arc.getSource())) {
-							SelectArc select = YAWLsimFactory.eINSTANCE.createSelectArc();
+							SelectArc select = YAWLAnnotationsFactory.eINSTANCE.createSelectArc();
 							select.setObject(arc);
 							select.setTargetTransition(transition);
 							if (first) {
@@ -75,7 +75,7 @@ public class YAWLSimulator extends ApplicationWithUIManager {
 						|| yawlTransition.getSplit().getText().equals(TransitionTypes.XOR))) {
 					boolean first = true;
 					for (org.pnml.tools.epnk.pnmlcoremodel.Arc arc : yawlTransition.getOut()) {
-						SelectArc select = YAWLsimFactory.eINSTANCE.createSelectArc();
+						SelectArc select = YAWLAnnotationsFactory.eINSTANCE.createSelectArc();
 						select.setObject(arc);
 						select.setSourceTransition(transition);
 						if (first) {
@@ -98,12 +98,12 @@ public class YAWLSimulator extends ApplicationWithUIManager {
 				Place yawlPlace = (Place) place;
 				if (yawlPlace.getType() != null && yawlPlace.getType().getText().equals(PlaceTypes.START)) {
 					markingMap.add(yawlPlace);
-					Marking marking = YAWLsimFactory.eINSTANCE.createMarking();
+					Marking marking = YAWLAnnotationsFactory.eINSTANCE.createMarking();
 					marking.setValue(1);
 					marking.setObject(place);
 					annotation.getObjectAnnotations().add(marking);
 					for (PlaceNode ref : flatNet.getRefPlaces(place)) {
-						Marking markingRef = YAWLsimFactory.eINSTANCE.createMarking();
+						Marking markingRef = YAWLAnnotationsFactory.eINSTANCE.createMarking();
 						markingRef.setValue(1);
 						markingRef.setObject(ref);
 						annotation.getObjectAnnotations().add(markingRef);
@@ -159,11 +159,11 @@ public class YAWLSimulator extends ApplicationWithUIManager {
 				}
 
 				if (enabled) {
-					EnabledTrasition enabledTransition = YAWLsimFactory.eINSTANCE.createEnabledTrasition();
+					EnabledTrasition enabledTransition = YAWLAnnotationsFactory.eINSTANCE.createEnabledTrasition();
 					enabledTransition.setObject(yawlTransition);
 					annotation.getObjectAnnotations().add(enabledTransition);
 					for (TransitionNode ref : flatNet.getRefTransitions(yawlTransition)) {
-						EnabledTrasition enabledTransitionRef = YAWLsimFactory.eINSTANCE.createEnabledTrasition();
+						EnabledTrasition enabledTransitionRef = YAWLAnnotationsFactory.eINSTANCE.createEnabledTrasition();
 						enabledTransitionRef.setObject(ref);
 						annotation.getObjectAnnotations().add(enabledTransitionRef);
 					}

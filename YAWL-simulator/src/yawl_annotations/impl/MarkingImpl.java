@@ -1,9 +1,7 @@
 /**
  */
-package YAWLAnnotations.impl;
+package yawl_annotations.impl;
 
-import YAWLAnnotations.Marking;
-import YAWLAnnotations.YAWLAnnotationsPackage;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -13,6 +11,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.pnml.tools.epnk.annotations.netannotations.impl.ObjectAnnotationImpl;
 
+import yawl_annotations.Marking;
+import yawl_annotations.YAWLAnnotationsPackage;
+
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Marking</b></em>'.
@@ -21,7 +22,7 @@ import org.pnml.tools.epnk.annotations.netannotations.impl.ObjectAnnotationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link YAWLAnnotations.impl.MarkingImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link yawl_annotations.impl.MarkingImpl#getValue <em>Value</em>}</li>
  * </ul>
  *
  * @generated
@@ -93,8 +94,7 @@ public class MarkingImpl extends ObjectAnnotationImpl implements Marking {
 	 * @generated NOT
 	 */
 	public EAttribute getAnnotationAttribute() {
-		return YAWLAnnotationsPackage.eINSTANCE.getMarking_Value();
-	}
+		return YAWLAnnotationsPackage.eINSTANCE.getMarking_Value();	}
 
 	/**
 	 * <!-- begin-user-doc -->

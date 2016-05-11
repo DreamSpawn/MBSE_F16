@@ -1,6 +1,6 @@
 /**
  */
-package YAWLAnnotations;
+package yawl_annotations;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -20,7 +20,7 @@ import org.pnml.tools.epnk.annotations.netannotations.NetannotationsPackage;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see YAWLAnnotations.YAWLAnnotationsFactory
+ * @see yawl_annotations.YAWLAnnotationsFactory
  * @model kind="package"
  * @generated
  */
@@ -31,7 +31,7 @@ public interface YAWLAnnotationsPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNAME = "YAWLAnnotations";
+	String eNAME = "yawl_annotations";
 
 	/**
 	 * The package namespace URI.
@@ -55,14 +55,14 @@ public interface YAWLAnnotationsPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	YAWLAnnotationsPackage eINSTANCE = YAWLAnnotations.impl.YAWLAnnotationsPackageImpl.init();
+	YAWLAnnotationsPackage eINSTANCE = yawl_annotations.impl.YAWLAnnotationsPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link YAWLAnnotations.impl.EnabledTrasitionImpl <em>Enabled Trasition</em>}' class.
+	 * The meta object id for the '{@link yawl_annotations.impl.EnabledTrasitionImpl <em>Enabled Trasition</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see YAWLAnnotations.impl.EnabledTrasitionImpl
-	 * @see YAWLAnnotations.impl.YAWLAnnotationsPackageImpl#getEnabledTrasition()
+	 * @see yawl_annotations.impl.EnabledTrasitionImpl
+	 * @see yawl_annotations.impl.YAWLAnnotationsPackageImpl#getEnabledTrasition()
 	 * @generated
 	 */
 	int ENABLED_TRASITION = 0;
@@ -113,11 +113,11 @@ public interface YAWLAnnotationsPackage extends EPackage {
 	int ENABLED_TRASITION_FEATURE_COUNT = NetannotationsPackage.OBJECT_ANNOTATION_FEATURE_COUNT + 2;
 
 	/**
-	 * The meta object id for the '{@link YAWLAnnotations.impl.SelectArcImpl <em>Select Arc</em>}' class.
+	 * The meta object id for the '{@link yawl_annotations.impl.SelectArcImpl <em>Select Arc</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see YAWLAnnotations.impl.SelectArcImpl
-	 * @see YAWLAnnotations.impl.YAWLAnnotationsPackageImpl#getSelectArc()
+	 * @see yawl_annotations.impl.SelectArcImpl
+	 * @see yawl_annotations.impl.YAWLAnnotationsPackageImpl#getSelectArc()
 	 * @generated
 	 */
 	int SELECT_ARC = 1;
@@ -177,11 +177,11 @@ public interface YAWLAnnotationsPackage extends EPackage {
 	int SELECT_ARC_FEATURE_COUNT = NetannotationsPackage.OBJECT_ANNOTATION_FEATURE_COUNT + 3;
 
 	/**
-	 * The meta object id for the '{@link YAWLAnnotations.impl.MarkingImpl <em>Marking</em>}' class.
+	 * The meta object id for the '{@link yawl_annotations.impl.MarkingImpl <em>Marking</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see YAWLAnnotations.impl.MarkingImpl
-	 * @see YAWLAnnotations.impl.YAWLAnnotationsPackageImpl#getMarking()
+	 * @see yawl_annotations.impl.MarkingImpl
+	 * @see yawl_annotations.impl.YAWLAnnotationsPackageImpl#getMarking()
 	 * @generated
 	 */
 	int MARKING = 2;
@@ -224,96 +224,96 @@ public interface YAWLAnnotationsPackage extends EPackage {
 
 
 	/**
-	 * Returns the meta object for class '{@link YAWLAnnotations.EnabledTrasition <em>Enabled Trasition</em>}'.
+	 * Returns the meta object for class '{@link yawl_annotations.EnabledTrasition <em>Enabled Trasition</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Enabled Trasition</em>'.
-	 * @see YAWLAnnotations.EnabledTrasition
+	 * @see yawl_annotations.EnabledTrasition
 	 * @generated
 	 */
 	EClass getEnabledTrasition();
 
 	/**
-	 * Returns the meta object for the reference list '{@link YAWLAnnotations.EnabledTrasition#getOutArcs <em>Out Arcs</em>}'.
+	 * Returns the meta object for the reference list '{@link yawl_annotations.EnabledTrasition#getOutArcs <em>Out Arcs</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Out Arcs</em>'.
-	 * @see YAWLAnnotations.EnabledTrasition#getOutArcs()
+	 * @see yawl_annotations.EnabledTrasition#getOutArcs()
 	 * @see #getEnabledTrasition()
 	 * @generated
 	 */
 	EReference getEnabledTrasition_OutArcs();
 
 	/**
-	 * Returns the meta object for the reference list '{@link YAWLAnnotations.EnabledTrasition#getInArcs <em>In Arcs</em>}'.
+	 * Returns the meta object for the reference list '{@link yawl_annotations.EnabledTrasition#getInArcs <em>In Arcs</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>In Arcs</em>'.
-	 * @see YAWLAnnotations.EnabledTrasition#getInArcs()
+	 * @see yawl_annotations.EnabledTrasition#getInArcs()
 	 * @see #getEnabledTrasition()
 	 * @generated
 	 */
 	EReference getEnabledTrasition_InArcs();
 
 	/**
-	 * Returns the meta object for class '{@link YAWLAnnotations.SelectArc <em>Select Arc</em>}'.
+	 * Returns the meta object for class '{@link yawl_annotations.SelectArc <em>Select Arc</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Select Arc</em>'.
-	 * @see YAWLAnnotations.SelectArc
+	 * @see yawl_annotations.SelectArc
 	 * @generated
 	 */
 	EClass getSelectArc();
 
 	/**
-	 * Returns the meta object for the reference '{@link YAWLAnnotations.SelectArc#getSourceTransition <em>Source Transition</em>}'.
+	 * Returns the meta object for the reference '{@link yawl_annotations.SelectArc#getSourceTransition <em>Source Transition</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Source Transition</em>'.
-	 * @see YAWLAnnotations.SelectArc#getSourceTransition()
+	 * @see yawl_annotations.SelectArc#getSourceTransition()
 	 * @see #getSelectArc()
 	 * @generated
 	 */
 	EReference getSelectArc_SourceTransition();
 
 	/**
-	 * Returns the meta object for the reference '{@link YAWLAnnotations.SelectArc#getTargetTransition <em>Target Transition</em>}'.
+	 * Returns the meta object for the reference '{@link yawl_annotations.SelectArc#getTargetTransition <em>Target Transition</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Target Transition</em>'.
-	 * @see YAWLAnnotations.SelectArc#getTargetTransition()
+	 * @see yawl_annotations.SelectArc#getTargetTransition()
 	 * @see #getSelectArc()
 	 * @generated
 	 */
 	EReference getSelectArc_TargetTransition();
 
 	/**
-	 * Returns the meta object for the attribute '{@link YAWLAnnotations.SelectArc#isSelected <em>Selected</em>}'.
+	 * Returns the meta object for the attribute '{@link yawl_annotations.SelectArc#isSelected <em>Selected</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Selected</em>'.
-	 * @see YAWLAnnotations.SelectArc#isSelected()
+	 * @see yawl_annotations.SelectArc#isSelected()
 	 * @see #getSelectArc()
 	 * @generated
 	 */
 	EAttribute getSelectArc_Selected();
 
 	/**
-	 * Returns the meta object for class '{@link YAWLAnnotations.Marking <em>Marking</em>}'.
+	 * Returns the meta object for class '{@link yawl_annotations.Marking <em>Marking</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Marking</em>'.
-	 * @see YAWLAnnotations.Marking
+	 * @see yawl_annotations.Marking
 	 * @generated
 	 */
 	EClass getMarking();
 
 	/**
-	 * Returns the meta object for the attribute '{@link YAWLAnnotations.Marking#getValue <em>Value</em>}'.
+	 * Returns the meta object for the attribute '{@link yawl_annotations.Marking#getValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see YAWLAnnotations.Marking#getValue()
+	 * @see yawl_annotations.Marking#getValue()
 	 * @see #getMarking()
 	 * @generated
 	 */
@@ -342,11 +342,11 @@ public interface YAWLAnnotationsPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link YAWLAnnotations.impl.EnabledTrasitionImpl <em>Enabled Trasition</em>}' class.
+		 * The meta object literal for the '{@link yawl_annotations.impl.EnabledTrasitionImpl <em>Enabled Trasition</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see YAWLAnnotations.impl.EnabledTrasitionImpl
-		 * @see YAWLAnnotations.impl.YAWLAnnotationsPackageImpl#getEnabledTrasition()
+		 * @see yawl_annotations.impl.EnabledTrasitionImpl
+		 * @see yawl_annotations.impl.YAWLAnnotationsPackageImpl#getEnabledTrasition()
 		 * @generated
 		 */
 		EClass ENABLED_TRASITION = eINSTANCE.getEnabledTrasition();
@@ -368,11 +368,11 @@ public interface YAWLAnnotationsPackage extends EPackage {
 		EReference ENABLED_TRASITION__IN_ARCS = eINSTANCE.getEnabledTrasition_InArcs();
 
 		/**
-		 * The meta object literal for the '{@link YAWLAnnotations.impl.SelectArcImpl <em>Select Arc</em>}' class.
+		 * The meta object literal for the '{@link yawl_annotations.impl.SelectArcImpl <em>Select Arc</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see YAWLAnnotations.impl.SelectArcImpl
-		 * @see YAWLAnnotations.impl.YAWLAnnotationsPackageImpl#getSelectArc()
+		 * @see yawl_annotations.impl.SelectArcImpl
+		 * @see yawl_annotations.impl.YAWLAnnotationsPackageImpl#getSelectArc()
 		 * @generated
 		 */
 		EClass SELECT_ARC = eINSTANCE.getSelectArc();
@@ -402,11 +402,11 @@ public interface YAWLAnnotationsPackage extends EPackage {
 		EAttribute SELECT_ARC__SELECTED = eINSTANCE.getSelectArc_Selected();
 
 		/**
-		 * The meta object literal for the '{@link YAWLAnnotations.impl.MarkingImpl <em>Marking</em>}' class.
+		 * The meta object literal for the '{@link yawl_annotations.impl.MarkingImpl <em>Marking</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see YAWLAnnotations.impl.MarkingImpl
-		 * @see YAWLAnnotations.impl.YAWLAnnotationsPackageImpl#getMarking()
+		 * @see yawl_annotations.impl.MarkingImpl
+		 * @see yawl_annotations.impl.YAWLAnnotationsPackageImpl#getMarking()
 		 * @generated
 		 */
 		EClass MARKING = eINSTANCE.getMarking();

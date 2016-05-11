@@ -1,6 +1,6 @@
 /**
  */
-package YAWLAnnotations;
+package yawl_annotations;
 
 import org.eclipse.emf.ecore.EFactory;
 
@@ -9,17 +9,17 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see YAWLAnnotations.YAWLsimPackage
+ * @see yawl_annotations.YAWLAnnotationsPackage
  * @generated
  */
-public interface YAWLsimFactory extends EFactory {
+public interface YAWLAnnotationsFactory extends EFactory {
 	/**
 	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	YAWLsimFactory eINSTANCE = YAWLAnnotations.impl.YAWLsimFactoryImpl.init();
+	YAWLAnnotationsFactory eINSTANCE = yawl_annotations.impl.YAWLAnnotationsFactoryImpl.init();
 
 	/**
 	 * Returns a new object of class '<em>Enabled Trasition</em>'.
@@ -55,6 +55,6 @@ public interface YAWLsimFactory extends EFactory {
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	YAWLsimPackage getYAWLsimPackage();
+	YAWLAnnotationsPackage getYAWLAnnotationsPackage();
 
-} //YAWLsimFactory
+} //YAWLAnnotationsFactory

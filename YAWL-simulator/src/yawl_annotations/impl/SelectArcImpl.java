@@ -1,10 +1,7 @@
 /**
  */
-package YAWLAnnotations.impl;
+package yawl_annotations.impl;
 
-import YAWLAnnotations.EnabledTrasition;
-import YAWLAnnotations.SelectArc;
-import YAWLAnnotations.YAWLAnnotationsPackage;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -14,6 +11,10 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.pnml.tools.epnk.annotations.netannotations.impl.ObjectAnnotationImpl;
 
+import yawl_annotations.EnabledTrasition;
+import yawl_annotations.SelectArc;
+import yawl_annotations.YAWLAnnotationsPackage;
+
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Select Arc</b></em>'.
@@ -22,9 +23,9 @@ import org.pnml.tools.epnk.annotations.netannotations.impl.ObjectAnnotationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link YAWLAnnotations.impl.SelectArcImpl#getSourceTransition <em>Source Transition</em>}</li>
- *   <li>{@link YAWLAnnotations.impl.SelectArcImpl#getTargetTransition <em>Target Transition</em>}</li>
- *   <li>{@link YAWLAnnotations.impl.SelectArcImpl#isSelected <em>Selected</em>}</li>
+ *   <li>{@link yawl_annotations.impl.SelectArcImpl#getSourceTransition <em>Source Transition</em>}</li>
+ *   <li>{@link yawl_annotations.impl.SelectArcImpl#getTargetTransition <em>Target Transition</em>}</li>
+ *   <li>{@link yawl_annotations.impl.SelectArcImpl#isSelected <em>Selected</em>}</li>
  * </ul>
  *
  * @generated

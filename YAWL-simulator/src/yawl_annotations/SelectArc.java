@@ -1,6 +1,6 @@
 /**
  */
-package YAWLAnnotations;
+package yawl_annotations;
 
 import org.pnml.tools.epnk.annotations.netannotations.ObjectAnnotation;
 
@@ -13,12 +13,12 @@ import org.pnml.tools.epnk.annotations.netannotations.ObjectAnnotation;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link YAWLAnnotations.SelectArc#getSourceTransition <em>Source Transition</em>}</li>
- *   <li>{@link YAWLAnnotations.SelectArc#getTargetTransition <em>Target Transition</em>}</li>
- *   <li>{@link YAWLAnnotations.SelectArc#isSelected <em>Selected</em>}</li>
+ *   <li>{@link yawl_annotations.SelectArc#getSourceTransition <em>Source Transition</em>}</li>
+ *   <li>{@link yawl_annotations.SelectArc#getTargetTransition <em>Target Transition</em>}</li>
+ *   <li>{@link yawl_annotations.SelectArc#isSelected <em>Selected</em>}</li>
  * </ul>
  *
- * @see YAWLAnnotations.YAWLAnnotationsPackage#getSelectArc()
+ * @see yawl_annotations.YAWLAnnotationsPackage#getSelectArc()
  * @model
  * @generated
  */
@@ -33,14 +33,14 @@ public interface SelectArc extends ObjectAnnotation {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Source Transition</em>' reference.
 	 * @see #setSourceTransition(EnabledTrasition)
-	 * @see YAWLAnnotations.YAWLAnnotationsPackage#getSelectArc_SourceTransition()
+	 * @see yawl_annotations.YAWLAnnotationsPackage#getSelectArc_SourceTransition()
 	 * @model
 	 * @generated
 	 */
 	EnabledTrasition getSourceTransition();
 
 	/**
-	 * Sets the value of the '{@link YAWLAnnotations.SelectArc#getSourceTransition <em>Source Transition</em>}' reference.
+	 * Sets the value of the '{@link yawl_annotations.SelectArc#getSourceTransition <em>Source Transition</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Source Transition</em>' reference.
@@ -59,14 +59,14 @@ public interface SelectArc extends ObjectAnnotation {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Target Transition</em>' reference.
 	 * @see #setTargetTransition(EnabledTrasition)
-	 * @see YAWLAnnotations.YAWLAnnotationsPackage#getSelectArc_TargetTransition()
+	 * @see yawl_annotations.YAWLAnnotationsPackage#getSelectArc_TargetTransition()
 	 * @model
 	 * @generated
 	 */
 	EnabledTrasition getTargetTransition();
 
 	/**
-	 * Sets the value of the '{@link YAWLAnnotations.SelectArc#getTargetTransition <em>Target Transition</em>}' reference.
+	 * Sets the value of the '{@link yawl_annotations.SelectArc#getTargetTransition <em>Target Transition</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Target Transition</em>' reference.
@@ -86,14 +86,14 @@ public interface SelectArc extends ObjectAnnotation {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Selected</em>' attribute.
 	 * @see #setSelected(boolean)
-	 * @see YAWLAnnotations.YAWLAnnotationsPackage#getSelectArc_Selected()
+	 * @see yawl_annotations.YAWLAnnotationsPackage#getSelectArc_Selected()
 	 * @model default="false" required="true"
 	 * @generated
 	 */
 	boolean isSelected();
 
 	/**
-	 * Sets the value of the '{@link YAWLAnnotations.SelectArc#isSelected <em>Selected</em>}' attribute.
+	 * Sets the value of the '{@link yawl_annotations.SelectArc#isSelected <em>Selected</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Selected</em>' attribute.

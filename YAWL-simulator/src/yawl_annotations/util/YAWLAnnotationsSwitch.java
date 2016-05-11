@@ -1,8 +1,6 @@
 /**
  */
-package YAWLAnnotations.util;
-
-import YAWLAnnotations.*;
+package yawl_annotations.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -12,6 +10,8 @@ import org.eclipse.emf.ecore.util.Switch;
 import org.pnml.tools.epnk.annotations.netannotations.Annotation;
 import org.pnml.tools.epnk.annotations.netannotations.ObjectAnnotation;
 import org.pnml.tools.epnk.annotations.netannotations.TextualAnnotation;
+
+import yawl_annotations.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,17 +23,17 @@ import org.pnml.tools.epnk.annotations.netannotations.TextualAnnotation;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see YAWLAnnotations.YAWLsimPackage
+ * @see yawl_annotations.YAWLAnnotationsPackage
  * @generated
  */
-public class YAWLsimSwitch<T> extends Switch<T> {
+public class YAWLAnnotationsSwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static YAWLsimPackage modelPackage;
+	protected static YAWLAnnotationsPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -41,9 +41,9 @@ public class YAWLsimSwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public YAWLsimSwitch() {
+	public YAWLAnnotationsSwitch() {
 		if (modelPackage == null) {
-			modelPackage = YAWLsimPackage.eINSTANCE;
+			modelPackage = YAWLAnnotationsPackage.eINSTANCE;
 		}
 	}
 
@@ -70,7 +70,7 @@ public class YAWLsimSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case YAWLsimPackage.ENABLED_TRASITION: {
+			case YAWLAnnotationsPackage.ENABLED_TRASITION: {
 				EnabledTrasition enabledTrasition = (EnabledTrasition)theEObject;
 				T result = caseEnabledTrasition(enabledTrasition);
 				if (result == null) result = caseObjectAnnotation(enabledTrasition);
@@ -78,7 +78,7 @@ public class YAWLsimSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case YAWLsimPackage.SELECT_ARC: {
+			case YAWLAnnotationsPackage.SELECT_ARC: {
 				SelectArc selectArc = (SelectArc)theEObject;
 				T result = caseSelectArc(selectArc);
 				if (result == null) result = caseObjectAnnotation(selectArc);
@@ -86,7 +86,7 @@ public class YAWLsimSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case YAWLsimPackage.MARKING: {
+			case YAWLAnnotationsPackage.MARKING: {
 				Marking marking = (Marking)theEObject;
 				T result = caseMarking(marking);
 				if (result == null) result = caseObjectAnnotation(marking);
@@ -205,4 +205,4 @@ public class YAWLsimSwitch<T> extends Switch<T> {
 		return null;
 	}
 
-} //YAWLsimSwitch
+} //YAWLAnnotationsSwitch
