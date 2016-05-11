@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: YAWL-project.edit;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-ClassPath: .
+Bundle-Activator: yawl_net.provider.YAWL_netEditPlugin$Implementation
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: yawl_net.provider
+Require-Bundle: org.eclipse.core.runtime,
+ YAWL-project;visibility:=reexport,
+ org.eclipse.emf.edit;visibility:=reexport,
+ org.pnml.tools.epnk;visibility:=reexport,
+ org.pnml.tools.epnk.edit;visibility:=reexport
+Bundle-ActivationPolicy: lazy
