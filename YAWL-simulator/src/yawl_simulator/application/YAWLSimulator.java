@@ -8,6 +8,7 @@ import org.pnml.tools.epnk.annotations.netannotations.NetAnnotation;
 import org.pnml.tools.epnk.annotations.netannotations.NetannotationsFactory;
 import org.pnml.tools.epnk.annotations.netannotations.ObjectAnnotation;
 import org.pnml.tools.epnk.applications.ApplicationWithUIManager;
+import org.pnml.tools.epnk.applications.ui.ApplicationUIManager;
 import org.pnml.tools.epnk.helpers.FlatAccess;
 import org.pnml.tools.epnk.pnmlcoremodel.PetriNet;
 import org.pnml.tools.epnk.pnmlcoremodel.PlaceNode;
@@ -29,6 +30,10 @@ public class YAWLSimulator extends ApplicationWithUIManager {
 	public YAWLSimulator(PetriNet petrinet) {
 		super(petrinet);
 		getNetAnnotations().setName("YAWLnet simulator");
+		ApplicationUIManager manager = this.getPresentationManager();
+//		manager.addActionHandler(new FireTransitionHandler(this));
+		manager.addActionHandler(new SelectArcHandler(this));
+		manager.addPresentationHandler(new YAWLPresentationHandler());
 	}
 
 	@Override
@@ -63,6 +68,7 @@ public class YAWLSimulator extends ApplicationWithUIManager {
 							SelectArc select = YAWLAnnotationsFactory.eINSTANCE.createSelectArc();
 							select.setObject(arc);
 							select.setTargetTransition(transition);
+							transition.getInArcs().add(select);
 							if (first) {
 								select.setSelected(true);
 								first = false;
@@ -78,6 +84,7 @@ public class YAWLSimulator extends ApplicationWithUIManager {
 						SelectArc select = YAWLAnnotationsFactory.eINSTANCE.createSelectArc();
 						select.setObject(arc);
 						select.setSourceTransition(transition);
+						transition.getOutArcs().add(select);
 						if (first) {
 							select.setSelected(true);
 							if (yawlTransition.getSplit().getText().equals(TransitionTypes.XOR))
