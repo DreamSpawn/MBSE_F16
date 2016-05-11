@@ -258,7 +258,7 @@ public class YAWLSimulator extends ApplicationWithUIManager {
 					
 					if(!(sArc.getObject() instanceof Arc))
 						continue;
-					Arc arc = (Arc) sArc;
+					Arc arc = (Arc) sArc.getObject();
 					
 					if(!(arc.getTarget() instanceof Place))
 						continue;
