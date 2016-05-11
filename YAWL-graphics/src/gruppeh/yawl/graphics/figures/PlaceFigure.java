@@ -22,20 +22,21 @@ public class PlaceFigure extends org.pnml.tools.epnk.gmf.extensions.graphics.fig
 	@Override
 	protected void fillShape(Graphics graphics) {
 		super.fillShape(graphics);
-		graphics.pushState();
 		
 		if (place instanceof yawl_net.Place){
 			yawl_net.Place yawl_place = (yawl_net.Place)place;
 			PlaceType type = yawl_place.getType();
 
+			if(type == null){
+				return;
+			}
+
+			graphics.pushState();
+
 			Rectangle rectangle = this.getClientArea();
 			int cx = rectangle.x + rectangle.width/2;
 			int cy = rectangle.y + rectangle.height/2;
 
-			if(type == null){
-				graphics.popState();
-				return;
-			}
 			graphics.setLineWidth(1);
 			
 			if (type.getText().equals(PlaceTypes.START)){
@@ -51,8 +52,8 @@ public class PlaceFigure extends org.pnml.tools.epnk.gmf.extensions.graphics.fig
 			} else if (type.getText().equals(PlaceTypes.NORMAL)){
 				
 			}
+			graphics.popState();
 		}
-		graphics.popState();
 	}
 	
 	@Override
