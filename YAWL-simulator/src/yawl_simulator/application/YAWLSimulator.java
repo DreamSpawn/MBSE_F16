@@ -117,7 +117,7 @@ public class YAWLSimulator extends ApplicationWithUIManager {
 	
 	public void markPlace(Place place, int value, FlatAccess flatNet, NetAnnotation annotation) {
 		Marking marking = YAWLAnnotationsFactory.eINSTANCE.createMarking();
-		marking.setValue(1);
+		marking.setValue(value);
 		marking.setObject(place);
 		annotation.getObjectAnnotations().add(marking);
 		for (PlaceNode ref : flatNet.getRefPlaces(place)) {
