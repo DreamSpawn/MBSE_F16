@@ -7,6 +7,10 @@ import org.pnml.tools.epnk.pnmlcoremodel.Transition;
 import yawl_net.TransitionType;
 import yawl_net.TransitionTypes;
 
+/**
+* @Mikkel & @Sandie
+**/
+
 public class TransitionFigure extends org.pnml.tools.epnk.gmf.extensions.graphics.figures.TransitionFigure {
 
 	public TransitionFigure(Transition transition) {

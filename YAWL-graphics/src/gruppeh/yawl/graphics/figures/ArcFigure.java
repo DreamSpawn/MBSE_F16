@@ -6,6 +6,9 @@ import org.pnml.tools.epnk.pnmlcoremodel.Arc;
 import yawl_net.ArcType;
 import yawl_net.ArcTypes;
 
+/**
+* @Mikkel & @Sandie
+**/
 
 public class ArcFigure extends org.pnml.tools.epnk.gmf.extensions.graphics.figures.ArcFigure {
 

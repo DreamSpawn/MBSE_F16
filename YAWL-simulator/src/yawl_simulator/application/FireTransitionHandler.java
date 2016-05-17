@@ -14,6 +14,10 @@ import org.pnml.tools.epnk.helpers.FlatAccess;
 import yawl_annotations.EnabledTrasition;
 import yawl_net.Place;
 
+/**
+* @Mikkel
+**/
+
 public class FireTransitionHandler implements IActionHandler {
 
 	private YAWLSimulator simulator;

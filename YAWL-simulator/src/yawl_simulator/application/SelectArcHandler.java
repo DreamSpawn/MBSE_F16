@@ -12,6 +12,10 @@ import yawl_net.Transition;
 import yawl_net.TransitionType;
 import yawl_net.TransitionTypes;
 
+/**
+* @Mikkel
+**/
+
 public class SelectArcHandler implements IActionHandler {
 
 	private YAWLSimulator simulaor;

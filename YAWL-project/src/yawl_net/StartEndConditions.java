@@ -14,7 +14,7 @@ import org.pnml.tools.epnk.pnmlcoremodel.PetriNet;
  * This is a constraint saying that a YAWL net should have exactly one start
  * place and one end place.
  *
- * @author ekki@dtu.dk
+ * @author ekki@dtu.dk & @Mikkel & @Sandie
  * @generated NOT
  */
 public class StartEndConditions extends AbstractModelConstraint {

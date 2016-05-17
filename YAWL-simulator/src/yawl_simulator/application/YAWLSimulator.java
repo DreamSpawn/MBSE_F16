@@ -28,6 +28,10 @@ import yawl_net.Transition;
 import yawl_net.TransitionTypes;
 import yawl_annotations.YAWLAnnotationsFactory;
 
+/**
+* @Mikkel
+**/
+
 public class YAWLSimulator extends ApplicationWithUIManager {
 
 	public YAWLSimulator(PetriNet petrinet) {

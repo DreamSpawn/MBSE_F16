@@ -1,5 +1,8 @@
 package gruppeh.yawl.graphics.figures;
 
+/**
+* @Mikkel & @Sandie
+**/
 
 import org.eclipse.draw2d.Graphics;
 import org.eclipse.draw2d.geometry.Point;

@@ -11,6 +11,10 @@ import org.pnml.tools.epnk.applications.ui.figures.PolylineOverlay;
 
 import yawl_annotations.SelectArc;
 
+/**
+* @Mikkel & @Sandie
+**/
+
 public class YAWLPresentationHandler implements IPresentationHandler {
 
 	@Override
