@@ -15,9 +15,8 @@ import yawl_annotations.EnabledTrasition;
 import yawl_net.Place;
 
 /**
-* @Mikkel
-**/
-
+ * @author Mikkel
+ **/
 public class FireTransitionHandler implements IActionHandler {
 
 	private YAWLSimulator simulator;
@@ -36,7 +35,7 @@ public class FireTransitionHandler implements IActionHandler {
 			
 			EnabledTrasition transition = (EnabledTrasition) annotation;
 			Map<Place,Integer> placeMarkings = simulator.computeMarking();
-			simulator.fireTransition(placeMarkings, transition);
+			simulator.fireTransition(placeMarkings, transition, flatNet);
 			Set<Place> markedPlaces = new HashSet<>();
 			for(Place place: placeMarkings.keySet()){
 				if (placeMarkings.get(place) > 0) {
@@ -45,7 +44,7 @@ public class FireTransitionHandler implements IActionHandler {
 				}
 			}
 			simulator.setEnabledTrasitions(netannotations, flatNet, markedPlaces);
-			simulator.setSelectArcs(netannotations, markedPlaces);
+			simulator.setSelectArcs(netannotations, markedPlaces, flatNet);
 			simulator.deleteNetAnnotationAfterCurrent();
 			simulator.addNetAnnotationAsCurrent(netannotations);
 			return true;

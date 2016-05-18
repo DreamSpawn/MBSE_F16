@@ -17,9 +17,9 @@ import gruppeh.yawl.graphics.figures.TransitionFigure;
 import yawl_net.YAWL_netPackage;
 
 /**
-* @Mikkel & @Sandie
-**/
-
+ * @author Mikkel
+ * @author Sandie
+ **/
 public class YAWLGraphics extends GraphicalExtension {
 	
 	@Override

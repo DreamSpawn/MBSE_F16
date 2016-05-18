@@ -1,9 +1,9 @@
 package gruppeh.yawl.graphics.figures;
 
 /**
-* @Mikkel & @Sandie
-**/
-
+ * @author Mikkel
+ * @author Sandie
+ **/
 import org.eclipse.draw2d.Graphics;
 import org.eclipse.draw2d.geometry.Point;
 import org.eclipse.draw2d.geometry.Rectangle;

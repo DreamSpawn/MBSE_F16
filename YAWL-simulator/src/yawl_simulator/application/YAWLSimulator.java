@@ -3,6 +3,7 @@ package yawl_simulator.application;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -15,7 +16,8 @@ import org.pnml.tools.epnk.helpers.FlatAccess;
 import org.pnml.tools.epnk.pnmlcoremodel.Node;
 import org.pnml.tools.epnk.pnmlcoremodel.PetriNet;
 import org.pnml.tools.epnk.pnmlcoremodel.PlaceNode;
-import org.pnml.tools.epnk.pnmlcoremodel.TransitionNode;
+import org.pnml.tools.epnk.pnmlcoremodel.RefPlace;
+import org.pnml.tools.epnk.pnmlcoremodel.RefTransition;
 
 import yawl_annotations.EnabledTrasition;
 import yawl_annotations.Marking;
@@ -29,9 +31,8 @@ import yawl_net.TransitionTypes;
 import yawl_annotations.YAWLAnnotationsFactory;
 
 /**
-* @Mikkel
-**/
-
+ * @author Mikkel
+ **/
 public class YAWLSimulator extends ApplicationWithUIManager {
 
 	public YAWLSimulator(PetriNet petrinet) {
@@ -50,14 +51,14 @@ public class YAWLSimulator extends ApplicationWithUIManager {
 
 		Set<Place> placeMarkings = setStartPlaceMarking(initialAnnotation, flatNet);
 		setEnabledTrasitions(initialAnnotation, flatNet, placeMarkings);
-		setSelectArcs(initialAnnotation, placeMarkings);
+		setSelectArcs(initialAnnotation, placeMarkings, flatNet);
 		initialAnnotation.setNet(this.getPetrinet());
 
 		this.getNetAnnotations().getNetAnnotations().add(initialAnnotation);
 		this.getNetAnnotations().setCurrent(initialAnnotation);
 	}
 
-	public void setSelectArcs(NetAnnotation annotation, Set<Place> placeMarking) {
+	public void setSelectArcs(NetAnnotation annotation, Set<Place> placeMarking, FlatAccess flatNet) {
 		ArrayList<EnabledTrasition> trasitionList = new ArrayList<EnabledTrasition>();
 		for (ObjectAnnotation objectAnnotation : annotation.getObjectAnnotations()) {
 			if (objectAnnotation instanceof EnabledTrasition)
@@ -70,8 +71,24 @@ public class YAWLSimulator extends ApplicationWithUIManager {
 				if (yawlTransition.getJoin() != null
 						&& yawlTransition.getJoin().getText().equals(TransitionTypes.XOR)) {
 					boolean first = true;
+					List<Arc> inArcs = new ArrayList<>();
 					for (org.pnml.tools.epnk.pnmlcoremodel.Arc arc : yawlTransition.getIn()) {
-						if (placeMarking.contains(arc.getSource())) {
+						if (arc instanceof Arc)
+							inArcs.add((Arc) arc);
+					}
+					for (RefTransition ref: flatNet.getRefTransitions(yawlTransition)){
+						for(org.pnml.tools.epnk.pnmlcoremodel.Arc arc : ref.getIn()){
+							if (arc instanceof Arc)
+								inArcs.add((Arc) arc);
+						}
+					}
+					
+					for (Arc arc : inArcs) {
+						Place place = resolvePlace(arc.getSource(), flatNet);
+						if (place == null)
+							continue;
+						
+						if (placeMarking.contains(place)) {
 							SelectArc select = YAWLAnnotationsFactory.eINSTANCE.createSelectArc();
 							select.setObject(arc);
 							select.setTargetTransition(transition);
@@ -87,7 +104,20 @@ public class YAWLSimulator extends ApplicationWithUIManager {
 				if (yawlTransition.getSplit() != null && (yawlTransition.getSplit().getText().equals(TransitionTypes.OR)
 						|| yawlTransition.getSplit().getText().equals(TransitionTypes.XOR))) {
 					boolean first = true;
+					
+					List<Arc> outArcs = new ArrayList<>();
 					for (org.pnml.tools.epnk.pnmlcoremodel.Arc arc : yawlTransition.getOut()) {
+						if (arc instanceof Arc)
+							outArcs.add((Arc) arc);
+					}
+					for (RefTransition ref: flatNet.getRefTransitions(yawlTransition)){
+						for(org.pnml.tools.epnk.pnmlcoremodel.Arc arc : ref.getOut()){
+							if (arc instanceof Arc)
+								outArcs.add((Arc) arc);
+						}
+					}
+					
+					for (Arc arc : outArcs) {
 						SelectArc select = YAWLAnnotationsFactory.eINSTANCE.createSelectArc();
 						select.setObject(arc);
 						select.setSourceTransition(transition);
@@ -160,12 +190,13 @@ public class YAWLSimulator extends ApplicationWithUIManager {
 						if (arc instanceof Arc) {
 							Arc yawlArc = (Arc) arc;
 							if (yawlArc.getType() == null || yawlArc.getType().getText().equals(ArcTypes.NORMAL)) {
-								if (yawlArc.getSource() instanceof Place) {
-									Place place = (Place) yawlArc.getSource();
-									if (!placeMarkings.contains(place)) {
-										enabled = false;
-										break;
-									}
+								Place place = resolvePlace(yawlArc.getSource(), flatNet);
+								if (place == null)
+									continue;
+									
+								if (!placeMarkings.contains(place)) {
+									enabled = false;
+									break;
 								}
 							}
 						}
@@ -177,14 +208,13 @@ public class YAWLSimulator extends ApplicationWithUIManager {
 						if (arc instanceof Arc) {
 							Arc yawlArc = (Arc) arc;
 							if (yawlArc.getType() == null || yawlArc.getType().getText().equals(ArcTypes.NORMAL)) {
-								if (yawlArc.getSource() instanceof Place) {
-									Place place = (Place) yawlArc.getSource();
-									if (placeMarkings.contains(place)) {
-										enabled = true;
-										break;
-									}
+								Place place = resolvePlace(yawlArc.getSource(), flatNet);
+								if (place != null && placeMarkings.contains(place)){
+									enabled = true;
+									break;
 								}
 							} else {
+								// the arc is a reset arc
 								enabled = true;
 								break;
 							}
@@ -196,18 +226,18 @@ public class YAWLSimulator extends ApplicationWithUIManager {
 					EnabledTrasition enabledTransition = YAWLAnnotationsFactory.eINSTANCE.createEnabledTrasition();
 					enabledTransition.setObject(yawlTransition);
 					annotation.getObjectAnnotations().add(enabledTransition);
-					for (TransitionNode ref : flatNet.getRefTransitions(yawlTransition)) {
+/*					for (TransitionNode ref : flatNet.getRefTransitions(yawlTransition)) {
 						EnabledTrasition enabledTransitionRef = YAWLAnnotationsFactory.eINSTANCE
 								.createEnabledTrasition();
 						enabledTransitionRef.setObject(ref);
 						annotation.getObjectAnnotations().add(enabledTransitionRef);
-					}
+					}*/
 				}
 			}
 		}
 	}
 
-	public void fireTransition(Map<Place, Integer> placeMarkings, EnabledTrasition transitionAnnotation) {
+	public void fireTransition(Map<Place, Integer> placeMarkings, EnabledTrasition transitionAnnotation, FlatAccess flatNet) {
 		if (transitionAnnotation.getObject() instanceof Transition) {
 			Transition transition = (Transition) transitionAnnotation.getObject();
 			
@@ -216,12 +246,12 @@ public class YAWLSimulator extends ApplicationWithUIManager {
 					|| transition.getJoin().getText() == TransitionTypes.AND
 					|| transition.getJoin().getText() == TransitionTypes.OR) {
 				for(org.pnml.tools.epnk.pnmlcoremodel.Arc arc: transition.getIn()){
-					Node node = arc.getSource();
-					if (!(node instanceof Place))
+					Place place = resolvePlace(arc.getSource(), flatNet);
+					if (place == null)
 						continue;
 					
-					Place place = (Place) node;
 					int value = placeMarkings.get(place) == null ? 0 : placeMarkings.get(place) -1;
+					// set value of place to 0 if arc is a reset arc
 					if (arc instanceof Arc){
 						Arc yawl_arc = (Arc) arc;
 						if (yawl_arc.getType() != null && yawl_arc.getType().getText() == ArcTypes.RESET)
@@ -237,16 +267,14 @@ public class YAWLSimulator extends ApplicationWithUIManager {
 							break;
 						
 						Arc arc = (Arc) sArc.getObject();
-						if (!(arc.getSource() instanceof Place))
+						Place place = resolvePlace(arc.getSource(), flatNet);
+						if (place == null)
 							break;
-						
-						Place place = (Place) arc.getSource();
+
 						int value = placeMarkings.get(place) == null ? 0 : placeMarkings.get(place) -1;
-						if (arc instanceof Arc){
-							Arc yawl_arc = (Arc) arc;
-							if (yawl_arc.getType() != null && yawl_arc.getType().getText() == ArcTypes.RESET)
+						if (arc.getType() != null && arc.getType().getText() == ArcTypes.RESET)
 								value = 0;
-						}
+
 						placeMarkings.put(place, value );
 						break;
 					}
@@ -256,10 +284,10 @@ public class YAWLSimulator extends ApplicationWithUIManager {
 			//check split and add tokens
 			if (transition.getSplit() == null || transition.getSplit().getText() == TransitionTypes.AND){
 				for (org.pnml.tools.epnk.pnmlcoremodel.Arc arc: transition.getOut()){
-					if(!(arc.getTarget() instanceof Place))
-						continue;
-					
-					Place place = (Place) arc.getTarget();
+					Place place = resolvePlace(arc.getTarget(), flatNet);
+					if (place == null)
+						break;
+
 					int value = placeMarkings.get(place) == null ? 1 : placeMarkings.get(place) +1;
 					placeMarkings.put(place, value );
 				}
@@ -273,14 +301,28 @@ public class YAWLSimulator extends ApplicationWithUIManager {
 						continue;
 					Arc arc = (Arc) sArc.getObject();
 					
-					if(!(arc.getTarget() instanceof Place))
+					Place place = resolvePlace(arc.getTarget(), flatNet);
+					if (place == null)
 						continue;
 					
-					Place place = (Place) arc.getTarget();
 					int value = placeMarkings.get(place) == null ? 1 : placeMarkings.get(place) +1;
 					placeMarkings.put(place, value );
 				}
 			}
 		}
+	}
+	
+	private Place resolvePlace(Node node, FlatAccess flatNet){
+		if (node instanceof Place){
+			return (Place) node;
+		}
+		
+		if (node instanceof RefPlace){
+			org.pnml.tools.epnk.pnmlcoremodel.Place pPlace = flatNet.resolve((PlaceNode) node);
+			if (pPlace instanceof Place){
+				return (Place) pPlace;
+			}
+		}
+		return null;
 	}
 }

@@ -8,9 +8,9 @@ import yawl_net.TransitionType;
 import yawl_net.TransitionTypes;
 
 /**
-* @Mikkel & @Sandie
-**/
-
+ * @author Mikkel
+ * @author Sandie
+ **/
 public class TransitionFigure extends org.pnml.tools.epnk.gmf.extensions.graphics.figures.TransitionFigure {
 
 	public TransitionFigure(Transition transition) {

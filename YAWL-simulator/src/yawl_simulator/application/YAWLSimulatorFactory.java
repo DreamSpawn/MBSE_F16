@@ -15,7 +15,7 @@ public class YAWLSimulatorFactory extends ApplicationFactory {
 
 	@Override
 	public String getDescription() {
-		return "A simple YAWL simulator not yet taken XOR, OR and RESET arcs into account";
+		return "A simple YAWL simulator";
 	}
 
 	@Override
