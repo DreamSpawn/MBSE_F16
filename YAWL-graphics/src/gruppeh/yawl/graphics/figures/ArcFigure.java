@@ -9,6 +9,7 @@ import yawl_net.ArcTypes;
 /**
  * @author Mikkel
  * @author Sandie
+ * @author Kim
  **/
 public class ArcFigure extends org.pnml.tools.epnk.gmf.extensions.graphics.figures.ArcFigure {
 

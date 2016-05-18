@@ -136,17 +136,17 @@ public class YAWLSimulator extends ApplicationWithUIManager {
 	}
 
 	private Set<Place> setStartPlaceMarking(NetAnnotation annotation, FlatAccess flatNet) {
-		Set<Place> markingMap = new HashSet<Place>();
+		Set<Place> markingSet = new HashSet<Place>();
 		for (org.pnml.tools.epnk.pnmlcoremodel.Place place : flatNet.getPlaces()) {
 			if (place instanceof Place) {
 				Place yawlPlace = (Place) place;
 				if (yawlPlace.getType() != null && yawlPlace.getType().getText().equals(PlaceTypes.START)) {
-					markingMap.add(yawlPlace);
+					markingSet.add(yawlPlace);
 					markPlace(yawlPlace, 1, flatNet, annotation);
 				}
 			}
 		}
-		return markingMap;
+		return markingSet;
 	}
 	
 	public void markPlace(Place place, int value, FlatAccess flatNet, NetAnnotation annotation) {
@@ -189,6 +189,7 @@ public class YAWLSimulator extends ApplicationWithUIManager {
 					for (org.pnml.tools.epnk.pnmlcoremodel.Arc arc : yawlTransition.getIn()) {
 						if (arc instanceof Arc) {
 							Arc yawlArc = (Arc) arc;
+							// if the arc is not a reset arc we need to check if the place has tokens
 							if (yawlArc.getType() == null || yawlArc.getType().getText().equals(ArcTypes.NORMAL)) {
 								Place place = resolvePlace(yawlArc.getSource(), flatNet);
 								if (place == null)

@@ -19,6 +19,7 @@ import yawl_net.YAWL_netPackage;
 /**
  * @author Mikkel
  * @author Sandie
+ * @author Kim
  **/
 public class YAWLGraphics extends GraphicalExtension {
 	

@@ -10,7 +10,7 @@
       <!-- @generated Yawl_sim -->
       <package
             uri="westh.it/YAWLsim"
-            class="YAWLAnnotation.YAWLsimPackage"
+            class="yawl_annotations.YAWLAnnotationsPackage"
             genModel="model/YawlAnnotations.genmodel"/>
    </extension>
 

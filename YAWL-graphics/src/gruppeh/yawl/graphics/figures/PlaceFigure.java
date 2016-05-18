@@ -3,13 +3,10 @@ package gruppeh.yawl.graphics.figures;
 /**
  * @author Mikkel
  * @author Sandie
+ * @author Kim
  **/
 import org.eclipse.draw2d.Graphics;
-import org.eclipse.draw2d.geometry.Point;
 import org.eclipse.draw2d.geometry.Rectangle;
-import org.eclipse.swt.SWT;
-import org.eclipse.swt.graphics.Color;
-import org.eclipse.swt.widgets.Display;
 import org.pnml.tools.epnk.pnmlcoremodel.Place;
 
 import yawl_net.PlaceType;

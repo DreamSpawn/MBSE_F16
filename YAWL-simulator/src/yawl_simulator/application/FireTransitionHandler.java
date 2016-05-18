@@ -29,11 +29,10 @@ public class FireTransitionHandler implements IActionHandler {
 	@Override
 	public boolean mouseDoubleClicked(MouseEvent arg0, ObjectAnnotation annotation) {
 		if (annotation instanceof EnabledTrasition){
+			EnabledTrasition transition = (EnabledTrasition) annotation;
 			FlatAccess flatNet = new FlatAccess(simulator.getPetrinet());
 			NetAnnotation netannotations = NetannotationsFactory.eINSTANCE.createNetAnnotation();
-
 			
-			EnabledTrasition transition = (EnabledTrasition) annotation;
 			Map<Place,Integer> placeMarkings = simulator.computeMarking();
 			simulator.fireTransition(placeMarkings, transition, flatNet);
 			Set<Place> markedPlaces = new HashSet<>();

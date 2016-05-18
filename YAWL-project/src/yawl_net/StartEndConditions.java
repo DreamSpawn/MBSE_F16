@@ -1,6 +1,5 @@
 package yawl_net;
 
-import java.awt.Shape;
 import java.util.Iterator;
 
 import org.eclipse.core.runtime.IStatus;
@@ -17,6 +16,7 @@ import org.pnml.tools.epnk.pnmlcoremodel.PetriNet;
  * @author ekki@dtu.dk
  * @author Mikkel
  * @author Sandie
+ * @author Kim
  * @generated NOT
  */
 public class StartEndConditions extends AbstractModelConstraint {
